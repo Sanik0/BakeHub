@@ -13,6 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+    <!-- CHARTS.JS SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="bg-[#F5F6FA] font-poppins ">
@@ -309,7 +311,7 @@
             </div>
 
             <!-- main info -->
-            <div class="w-full p-[30px]">
+            <div class="w-full flex flex-col gap-[50px] p-[30px]">
                 <!-- CARDS -->
                 <div class="w-full flex flex-col gap-[20px]">
                     <h1 class="text-[32px] font-semibold">Dashboard</h1>
@@ -433,12 +435,57 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <!-- GRAPH -->
+                <div class="w-full bg-white p-[30px] rounded-[20px] flex flex-col gap-[20px]">
+                    <h3 class="text-[24px] font-semibold">Sales Details</h3>
+                    <div class="h-[444px] w-full">
+                        <canvas id="myChart"></canvas>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(54, 162, 235, 0.5)'); 
+        gradient.addColorStop(1, 'rgba(54, 162, 235, 0)'); 
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [1000, 1200, 900, 1400, 1300, 900, 1100, 1600, 1200, 900, 900, 1500],
+                    borderColor: 'rgba(54, 162, 235, 1)', 
+                    backgroundColor: gradient,           
+                    borderWidth: 2,
+                    fill: true,                            
+                    tension: 0                          
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
 </body>
 
 </html>

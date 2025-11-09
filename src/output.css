@@ -237,6 +237,9 @@
   .h-\[40px\] {
     height: 40px;
   }
+  .h-\[44\] {
+    height: 44;
+  }
   .h-\[50px\] {
     height: 50px;
   }
@@ -246,8 +249,14 @@
   .h-\[100vh\] {
     height: 100vh;
   }
+  .h-\[444px\] {
+    height: 444px;
+  }
   .h-full {
     height: 100%;
+  }
+  .max-h-\[444px\] {
+    max-height: 444px;
   }
   .w-\[5px\] {
     width: 5px;
@@ -347,6 +356,9 @@
   }
   .gap-\[30px\] {
     gap: 30px;
+  }
+  .gap-\[50px\] {
+    gap: 50px;
   }
   .gap-\[px\] {
     gap: px;
@@ -542,6 +554,9 @@
   }
   .text-\[20px\] {
     font-size: 20px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
   }
   .text-\[28px\] {
     font-size: 28px;
