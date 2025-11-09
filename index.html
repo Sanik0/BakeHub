@@ -18,10 +18,10 @@
 </head>
 
 <body class="bg-[#F5F6FA] font-poppins ">
-    <main class="flex">
+    <main class="flex relative">
         <!-- SIDEBAR SECTION -->
         <section
-            class="w-full flex flex-col gap-[30px] max-w-[240px] h-[100vh] py-[30px] border-l bg-white border-[1px] border-[#E0E0E0]">
+            class="w-full fixed flex flex-col gap-[30px] max-w-[240px] h-[100vh] py-[30px] border-l bg-white border-[1px] border-[#E0E0E0]">
             <div class="text-[20px] w-full text-center font-bold"><span class="text-[#FBEDCD]">Bake</span>Hub</div>
             <nav class="w-full flex flex-col gap-[10px]">
                 <div class="group w-full flex items-center gap-[30px]">
@@ -242,7 +242,7 @@
         </section>
 
         <!-- MAIN CONTENT SECTION -->
-        <section class="w-full">
+        <section class="w-full pl-[240px]">
             <!-- HEADER -->
             <div
                 class="w-full border-b-[#E0E0E0] border-b-[1px] justify-between items-center flex bg-white px-[28px] py-[7px]">
@@ -443,17 +443,91 @@
                         <canvas id="myChart"></canvas>
                     </div>
                 </div>
+                <!-- TABLE -->
+                <div class="w-full p-[30px] rounded-[20px] gap-[20px] bg-white flex flex-col">
+                    <h3 class="text-[24px] font-semibold">Order Details</h3>
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-[#F1F4F9] px-[10px] py-[15px]">
+                                <th class="text-[14px] rounded-tl-[10px] rounded-bl-[10px] px-[10px] py-[15px] font-semibold text-start">Product Name</th>
+                                <th
+                                    class="text-[14px] px-[10px] py-[15px] px-[10px] py-[15px] font-semibold text-start">
+                                    Location</th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Date-Time</th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Piece</th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Amount</th>
+                                <th class="text-[14px] rounded-tr-[10px] rounded-br-[10px] px-[10px] py-[15px] font-semibold text-start">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
+                                    Cupcake</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
+                                    Batasan</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    12.09.2019 - 12.53 PM</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">423
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">₱34,295
+                                </td>
+                                <td
+                                    class="text-[14px] px-[10px] py-[15px] font-medium text-start">
+                                    <div class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Delivered
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
+                                    Cupcake</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
+                                    Batasan</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    12.09.2019 - 12.53 PM</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">423
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">₱34,295
+                                </td>
+                                <td
+                                    class="text-[14px] px-[10px] py-[15px] font-medium text-start">
+                                    <div class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Delivered
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
+                                    Cupcake</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
+                                    Batasan</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    12.09.2019 - 12.53 PM</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">423
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">₱34,295
+                                </td>
+                                <td
+                                    class="text-[14px] px-[10px] py-[15px] font-medium text-start">
+                                    <div class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Delivered
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
             </div>
         </section>
 
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         const ctx = document.getElementById('myChart').getContext('2d');
 
         const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, 'rgba(54, 162, 235, 0.5)'); 
-        gradient.addColorStop(1, 'rgba(54, 162, 235, 0)'); 
+        gradient.addColorStop(0, 'rgba(67, 121, 238, 0.5)');
+        gradient.addColorStop(1, 'rgba(67, 121, 238, 0)');
 
         new Chart(ctx, {
             type: 'line',
@@ -461,12 +535,12 @@
                 labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
                 datasets: [{
                     label: '# of Votes',
-                    data: [1000, 1200, 900, 1400, 1300, 900, 1100, 1600, 1200, 900, 900, 1500],
-                    borderColor: 'rgba(54, 162, 235, 1)', 
-                    backgroundColor: gradient,           
+                    data: [150, 190, 300, 190, 275, 150, 285, 290, 350, 300, 450, 560],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    backgroundColor: gradient,
                     borderWidth: 2,
-                    fill: true,                            
-                    tension: 0                          
+                    fill: true,
+                    tension: 0
                 }]
             },
             options: {
