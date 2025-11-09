@@ -304,10 +304,11 @@
             </div>
 
             <!-- main info -->
-            <div class="w-full flex flex-col gap-[50px] p-[30px]">
-                <!-- CARDS -->
+            <div class="w-full flex flex-col gap-[30px] p-[30px]">
+                <!-- FILTER -->
                 <div class="w-full flex flex-col gap-[20px]">
                     <h1 class="text-[32px] font-semibold">Manage Users</h1>
+                    <!-- FILTER -->
                     <form class="flex w-fit items-center bg-white border-[1px] rounded-[10px] border-[#E0E0E0]">
                         <div class="border-r-[#E0E0E0] border-r-[1px] w-fit px-[30px] py-[25px]">
                             <svg width="21" height="24" viewBox="0 0 21 24" fill="none"
@@ -331,7 +332,7 @@
                             </select>
                         </div>
                         <div
-                            class="border-r-[#E0E0E0] flex items-center gap-[10px] group cursor-pointer text-[14px] text-[#EA0234] font-medium border-r-[1px] w-fit px-[30px] py-[25px]">
+                            class="flex items-center gap-[10px] group cursor-pointer text-[14px] text-[#EA0234] font-medium w-fit px-[30px] py-[25px]">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -341,6 +342,111 @@
                             Reset Filter
                         </div>
                     </form>
+                </div>
+                <!-- TABLE -->
+                <div class="w-full p-[30px] rounded-[20px] gap-[20px] bg-white flex flex-col">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-[#F1F4F9] px-[10px] py-[15px]">
+                                <th
+                                    class="text-[14px] rounded-tl-[10px] rounded-bl-[10px] px-[10px] py-[15px] font-semibold text-start">
+                                    Firstname</th>
+                                <th
+                                    class="text-[14px] px-[10px] py-[15px] px-[10px] py-[15px] font-semibold text-start">
+                                    Lastname</th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Email</th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Date created</th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Type</th>
+                                <th
+                                    class="text-[14px] rounded-tr-[10px] rounded-br-[10px] px-[10px] py-[15px] font-semibold text-start">
+                                    Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
+                                    Cupcake</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
+                                    Batasan</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    12.09.2019 - 12.53 PM</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">423
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    <div
+                                        class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Customer
+                                    </div>
+                                </td>
+                                <td
+                                    class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
+                                    <div
+                                        class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Edit
+                                    </div>
+                                    <div
+                                        class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Delete
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
+                                    Cupcake</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
+                                    Batasan</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    12.09.2019 - 12.53 PM</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">423
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    <div
+                                        class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Customer
+                                    </div>
+                                </td>
+                                <td
+                                    class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
+                                    <div
+                                        class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Edit
+                                    </div>
+                                    <div
+                                        class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Delete
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
+                                    Cupcake</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
+                                    Batasan</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    12.09.2019 - 12.53 PM</td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">423
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    <div
+                                        class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Customer
+                                    </div>
+                                </td>
+                                <td
+                                    class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
+                                    <div
+                                        class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Edit
+                                    </div>
+                                    <div
+                                        class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Delete
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                 </div>
             </div>
         </section>
