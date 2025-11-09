@@ -539,6 +539,15 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .fill-\[\#B9AC8F\] {
+    fill: #B9AC8F;
+  }
+  .fill-\[\#\] {
+    fill: #;
+  }
+  .fill-black {
+    fill: var(--color-black);
+  }
   .fill-gray-500 {
     fill: var(--color-gray-500);
   }
@@ -676,6 +685,9 @@
   }
   .text-\[\#A3A3A3\] {
     color: #A3A3A3;
+  }
+  .text-\[\#B9AC8F\] {
+    color: #B9AC8F;
   }
   .text-\[\#F93C65\] {
     color: #F93C65;
