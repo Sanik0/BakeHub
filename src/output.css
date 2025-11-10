@@ -391,11 +391,17 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-start {
+    justify-content: flex-start;
   }
   .gap-\[5px\] {
     gap: 5px;
@@ -629,6 +635,9 @@
   }
   .p-\[30px\] {
     padding: 30px;
+  }
+  .p-\[100px\] {
+    padding: 100px;
   }
   .px-\[10px\] {
     padding-inline: 10px;

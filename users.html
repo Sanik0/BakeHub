@@ -18,10 +18,10 @@
 </head>
 
 <body class="bg-[#F5F6FA] relative font-poppins ">
-    <!-- MODAL CONTAINER -->
-    <div class="absolute h-[100vh] flex items-center justify-center z-999 w-full ">
+    <!-- DELETE CONTAINER -->
+    <div class="absolute h-[100vh] hidden items-start p-[100px] justify-center z-999 w-full ">
         <!-- DELETE MODAL -->
-        <div class="bg-white shadow-lg px-[45px] hidden flex-col gap-[30px] py-[30px] rounded-[20px]">
+        <form class="bg-white shadow-lg px-[45px] flex flex-col gap-[30px] py-[30px] rounded-[20px]">
             <div class="flex flex-col items-center gap-[10px]">
                 <div class="rounded-[50%] h-[65px] w-[65px] flex items-center justify-center bg-[rgba(255,56,60,.2)]">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,7 @@
                 <p class="text-[16px] text-gray-500 font-medium max-w-[357px] text-center">This will delete <span
                         class="text-[#FF383C]">‘Juan Santos’</span> data. And this action cannot be undone.</p>
             </div>
-            <form class="flex w-full flex-col gap-[15px]">
+            <div class="flex w-full flex-col gap-[15px]">
                 <button
                     class="w-full bg-[#FF383C] cursor-pointer hover:bg-[#e03235] transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
                     Yes, Delete User
@@ -43,9 +43,11 @@
                     class="w-full cursor-pointer bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
                     Cancel
                 </button>
-            </form>
-        </div>
-        <!-- EDIT MODAL -->
+            </div>
+        </form>
+    </div>
+    <!-- EDIT MODAL -->
+    <div class="absolute h-[100vh] flex items-start p-[100px] justify-center z-999 w-full ">
         <form
             class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
             <div class="border-b-[1px] border-b-[#] py-[5px] text-[20px] font-semibold text-gray-500">Edt user
