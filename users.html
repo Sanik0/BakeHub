@@ -18,9 +18,10 @@
 </head>
 
 <body class="bg-[#F5F6FA] relative font-poppins ">
-    <!-- DELETE MODAL -->
+    <!-- MODAL CONTAINER -->
     <div class="absolute h-[100vh] flex items-center justify-center z-999 w-full ">
-        <div class="bg-white shadow-lg px-[45px] flex flex-col gap-[30px] py-[30px] rounded-[20px]">
+        <!-- DELETE MODAL -->
+        <div class="bg-white shadow-lg px-[45px] hidden flex-col gap-[30px] py-[30px] rounded-[20px]">
             <div class="flex flex-col items-center gap-[10px]">
                 <div class="rounded-[50%] h-[65px] w-[65px] flex items-center justify-center bg-[rgba(255,56,60,.2)]">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,9 +31,10 @@
                     </svg>
                 </div>
                 <h3 class="text-[20px] font-semibold">Are you sure?</h3>
-                <p class="text-[16px] text-gray-500 font-medium max-w-[357px] text-center">This will delete <span class="text-[#FF383C]">‘Juan Santos’</span> data. And this action cannot be undone.</p>
+                <p class="text-[16px] text-gray-500 font-medium max-w-[357px] text-center">This will delete <span
+                        class="text-[#FF383C]">‘Juan Santos’</span> data. And this action cannot be undone.</p>
             </div>
-            <div class="flex w-full flex-col gap-[15px]">
+            <form class="flex w-full flex-col gap-[15px]">
                 <button
                     class="w-full bg-[#FF383C] cursor-pointer hover:bg-[#e03235] transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
                     Yes, Delete User
@@ -41,8 +43,66 @@
                     class="w-full cursor-pointer bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
                     Cancel
                 </button>
-            </div>
+            </form>
         </div>
+        <!-- EDIT MODAL -->
+        <form
+            class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
+            <div class="border-b-[1px] border-b-[#] py-[5px] text-[20px] font-semibold text-gray-500">Edt user
+                informations</div>
+            <div class="flex items-center gap-[20px]">
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Firstname</label>
+                    <input placeholder="Ex: Juan"
+                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                        type="text">
+                </div>
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Firstname</label>
+                    <input placeholder="Ex: Santos"
+                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                        type="text">
+                </div>
+            </div>
+            <div class="flex flex-col w-full gap-[5px]">
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Email</label>
+                <input placeholder="Ex: juansantos@gmail.com"
+                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                    type="email">
+            </div>
+            <div class="flex flex-col w-full gap-[5px]">
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Contact</label>
+                <input placeholder="Ex: 0986512321"
+                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                    type="tel">
+            </div>
+            <div class="flex flex-col w-full gap-[5px]">
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Address</label>
+                <textarea placeholder="Ex: 1234 Street, City, Country"
+                    class="rounded-[5px] resize-none min-h-[100px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                    name="" id=""></textarea>
+            </div>
+            <div class="flex items-center gap-[20px]">
+                <div class="flex items-center gap-[10px]">
+                    <input type="radio" name="role" class="cursor-pointer accent-[#00a085] scale-150" checked>
+                    <label class="text-[16px] text-[#00B69B]" for="">Customer</label>
+                </div>
+                <div class="flex items-center gap-[10px]">
+                    <input type="radio" name="role" class="cursor-pointer accent-[#CB30E0] scale-150">
+                    <label class="text-[16px] text-[#CB30E0]" for="">Admin</label>
+                </div>
+            </div>
+            <div class="flex w-full flex-col gap-[15px]">
+                <button
+                    class="w-full bg-orange-500 cursor-pointer hover:bg-orange-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
+                    Save Edit
+                </button>
+                <button
+                    class="w-full cursor-pointer bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
+                    Cancel
+                </button>
+            </div>
+        </form>
     </div>
     <main class="flex relative">
         <!-- SIDEBAR SECTION -->
@@ -381,7 +441,8 @@
                                     class="text-[14px] px-[10px] py-[15px] px-[10px] py-[15px] font-semibold text-start">
                                     Lastname</th>
                                 <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Email</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Date created</th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Date created
+                                </th>
                                 <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Type</th>
                                 <th
                                     class="text-[14px] rounded-tr-[10px] rounded-br-[10px] px-[10px] py-[15px] font-semibold text-start">
@@ -390,7 +451,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Vanilla
                                     Cupcake</td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
                                     Batasan</td>
@@ -417,7 +479,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Vanilla
                                     Cupcake</td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
                                     Batasan</td>
@@ -444,7 +507,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Vanilla
                                     Cupcake</td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
                                     Batasan</td>
