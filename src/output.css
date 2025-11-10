@@ -608,6 +608,9 @@
   .bg-\[rgba\(0\,182\,155\,\.2\)\] {
     background-color: rgba(0,182,155,.2);
   }
+  .bg-\[rgba\(21\,93\,252\,\.2\)\] {
+    background-color: rgba(21,93,252,.2);
+  }
   .bg-\[rgba\(110\,\)\] {
     background-color: rgba(110,);
   }
@@ -789,6 +792,9 @@
   .text-\[\#00B69B\] {
     color: #00B69B;
   }
+  .text-\[\#155dfc\] {
+    color: #155dfc;
+  }
   .text-\[\#A3A3A3\] {
     color: #A3A3A3;
   }
@@ -818,6 +824,9 @@
   }
   .text-black {
     color: var(--color-black);
+  }
+  .text-blue-600 {
+    color: var(--color-blue-600);
   }
   .text-gray-500 {
     color: var(--color-gray-500);
@@ -945,10 +954,52 @@
       accent-color: #;
     }
   }
+  .hover\:bg-\[\#155dfc\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #155dfc;
+      }
+    }
+  }
   .hover\:bg-\[\#e03235\] {
     &:hover {
       @media (hover: hover) {
         background-color: #e03235;
+      }
+    }
+  }
+  .hover\:bg-\[rgb\(21\,93\,252\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgb(21,93,252);
+      }
+    }
+  }
+  .hover\:bg-\[rgba\(21\,93\,252\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgba(21,93,252);
+      }
+    }
+  }
+  .hover\:bg-\[rgba\(21\,93\,252\,\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgba(21,93,252,);
+      }
+    }
+  }
+  .hover\:bg-\[rgba\(21\,93\,252\,\.2\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgba(21,93,252,.2);
+      }
+    }
+  }
+  .hover\:bg-\[rgba\(21\,93\,252\,\.3\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgba(21,93,252,.3);
       }
     }
   }
