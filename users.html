@@ -173,7 +173,7 @@
         </form>
     </div>
     <!-- ADD MODAL -->
-    <div id="viewModal" class="absolute h-[100vh] flex items-start p-[100px] justify-center z-999 w-full ">
+    <div id="viewModal" class="absolute h-[100vh] hidden items-start p-[100px] justify-center z-999 w-full ">
         <div
             class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[30px] py-[30px] rounded-[20px]">
             <div class="flex items-center gap-[10px]">
@@ -252,7 +252,7 @@
             </div>
             <div class="flex w-full flex-col gap-[15px]">
                 <div id="cancelViewBtn"
-                    class="w-full bg-blue-500 cursor-pointer hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
+                    class="w-full bg-blue-500 cursor-pointer text-center hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
                     Go Back
             </div>
             </div>
@@ -716,6 +716,10 @@
             const addButton = document.getElementById("addBtn");
             const cancelAddButton = document.getElementById("cancelAddBtn");
             const addModal = document.getElementById("addModal")
+            // view function
+            const viewButton = document.getElementById("viewBtn");
+            const cancelViewButton = document.getElementById("cancelViewBtn");
+            const viewModal = document.getElementById("viewModal")
 
             editButton.addEventListener("click", function () {
                 editModal.classList.remove("hidden");
@@ -747,6 +751,16 @@
             cancelAddButton.addEventListener("click", function () {
                 addModal.classList.remove("flex");
                 addModal.classList.add("hidden");
+            })
+
+            // view block
+            viewButton.addEventListener("click", function () {
+                viewModal.classList.remove("hidden");
+                viewModal.classList.add("flex");
+            })
+            cancelViewButton.addEventListener("click", function () {
+                viewModal.classList.remove("flex");
+                viewModal.classList.add("hidden");
             })
 
 
