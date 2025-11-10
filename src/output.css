@@ -258,8 +258,14 @@
   .h-\[24px\] {
     height: 24px;
   }
+  .h-\[25px\] {
+    height: 25px;
+  }
   .h-\[35px\] {
     height: 35px;
+  }
+  .h-\[40px\] {
+    height: 40px;
   }
   .h-\[50px\] {
     height: 50px;
@@ -275,6 +281,9 @@
   }
   .h-\[444px\] {
     height: 444px;
+  }
+  .h-\[px\] {
+    height: px;
   }
   .h-full {
     height: 100%;
@@ -309,8 +318,17 @@
   .w-\[24px\] {
     width: 24px;
   }
+  .w-\[25px\] {
+    width: 25px;
+  }
   .w-\[35px\] {
     width: 35px;
+  }
+  .w-\[40px\] {
+    width: 40px;
+  }
+  .w-\[45px\] {
+    width: 45px;
   }
   .w-\[50px\] {
     width: 50px;
@@ -347,6 +365,9 @@
   }
   .min-w-\[35px\] {
     min-width: 35px;
+  }
+  .min-w-\[40px\] {
+    min-width: 40px;
   }
   .min-w-\[50px\] {
     min-width: 50px;
@@ -622,6 +643,9 @@
   }
   .bg-orange-500 {
     background-color: var(--color-orange-500);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
   }
   .bg-red-600 {
     background-color: var(--color-red-600);
@@ -973,6 +997,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-200);
+      }
+    }
+  }
+  .hover\:bg-gray-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-400);
       }
     }
   }
