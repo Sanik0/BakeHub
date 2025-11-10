@@ -19,7 +19,7 @@
 
 <body class="bg-[#F5F6FA] relative font-poppins ">
     <!-- DELETE CONTAINER -->
-    <div class="absolute h-[100vh] hidden items-start p-[100px] justify-center z-999 w-full ">
+    <div id="deleteModal" class="absolute h-[100vh] hidden items-start p-[100px] justify-center z-999 w-full ">
         <!-- DELETE MODAL -->
         <form class="bg-white shadow-lg px-[45px] flex flex-col gap-[30px] py-[30px] rounded-[20px]">
             <div class="flex flex-col items-center gap-[10px]">
@@ -39,15 +39,15 @@
                     class="w-full bg-[#FF383C] cursor-pointer hover:bg-[#e03235] transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
                     Yes, Delete User
                 </button>
-                <button
+                <div id="cancelDeleteBtn"
                     class="w-full cursor-pointer bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
                     Cancel
-                </button>
+                </div>
             </div>
         </form>
     </div>
     <!-- EDIT MODAL -->
-    <div class="absolute h-[100vh] flex items-start p-[100px] justify-center z-999 w-full ">
+    <div id="editModal" class="absolute h-[100vh] hidden items-start p-[100px] justify-center z-999 w-full ">
         <form
             class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
             <div class="border-b-[1px] border-b-[#] py-[5px] text-[20px] font-semibold text-gray-500">Edt user
@@ -99,10 +99,11 @@
                     class="w-full bg-orange-500 cursor-pointer hover:bg-orange-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
                     Save Edit
                 </button>
-                <button
-                    class="w-full cursor-pointer bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
+                <div 
+                id="cancelEditBtn"
+                    class="w-full cursor-pointer text-center text-gray-600 bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
                     Cancel
-                </button>
+                </div>
             </div>
         </form>
     </div>
@@ -499,11 +500,11 @@
                                 <td
                                     class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
                                     <div
-                                        class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                       id="editBtn" class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
                                         Edit
                                     </div>
                                     <div
-                                        class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                       id="deletBtn" class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
                                         Delete
                                     </div>
                                 </td>
@@ -544,6 +545,7 @@
         </section>
 
     </main>
+    <!-- CHARTSJS JS -->
     <script>
         const ctx = document.getElementById('myChart').getContext('2d');
 
@@ -581,6 +583,26 @@
             }
         });
     </script>
+    <!-- CUSTOM JS -->
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const editButton = document.getElementById("editBtn");
+            const cancelEditButton = document.getElementById("cancelEditBtn");
+            const editModal = document.getElementById("editModal");
+
+            editButton.addEventListener("click", function() {
+                editModal.classList.remove("hidden");
+                editModal.classList.add("flex");
+            })
+
+            cancelEditButton.addEventListener("click", function() {
+                editModal.classList.add("hidden");
+                editModal.classList.remove("flex");
+            })
+
+            
+        })
+     </script>
 </body>
 
 </html>
