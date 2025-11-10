@@ -282,6 +282,9 @@
   .h-\[65px\] {
     height: 65px;
   }
+  .h-\[75px\] {
+    height: 75px;
+  }
   .h-\[100vh\] {
     height: 100vh;
   }
@@ -342,6 +345,9 @@
   .w-\[65px\] {
     width: 65px;
   }
+  .w-\[75px\] {
+    width: 75px;
+  }
   .w-\[100px\] {
     width: 100px;
   }
@@ -377,6 +383,9 @@
   }
   .min-w-\[50px\] {
     min-width: 50px;
+  }
+  .min-w-\[75px\] {
+    min-width: 75px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -482,6 +491,9 @@
   }
   .rounded-\[50\%\] {
     border-radius: 50%;
+  }
+  .rounded-\[50\] {
+    border-radius: 50;
   }
   .rounded-\[50px\] {
     border-radius: 50px;
