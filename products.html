@@ -78,7 +78,7 @@
             </div>
 
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Prodcut name</label>
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Product name</label>
                 <input placeholder="Ex: Cakes" value="Chocolate Cake"
                     class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
                     type="text">
@@ -96,7 +96,7 @@
             <div class="flex flex-col w-full gap-[5px]">
                 <label class="text-[14px] text-gray-600 font-semibold" for="">Available Stocks</label>
                 <input placeholder="0" value="24"
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 bg-gray-50 focus:outline-none"
+                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 bg-white focus:outline-none"
                     type="number">
             </div>
 
@@ -132,11 +132,10 @@
         <form
             class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
             <div class="border-b-[1px] border-b-[#E0E0E0] py-[5px] text-[20px] font-semibold text-gray-500">Add new
-                category
-            </div>
+                Product</div>
 
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Category Image</label>
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Product Image</label>
                 <div class="flex flex-col gap-[10px]">
                     <div
                         class="w-full h-[200px] border-2 border-dashed border-gray-300 rounded-[10px] flex items-center justify-center overflow-hidden bg-gray-50">
@@ -157,26 +156,26 @@
             </div>
 
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Title</label>
-                <input placeholder="Ex: Cakes" value=""
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Product name</label>
+                <input placeholder="Ex: Chocolate Cake" value=""
                     class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
                     type="text">
             </div>
 
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Description</label>
-                <textarea placeholder="Ex: Delicious homemade cakes for all occasions"
-                    class="rounded-[5px] resize-none min-h-[100px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    name="" id=""></textarea>
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Category</label>
+                <Select
+                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none">
+                    <option value="">Cupcakes</option>
+                    <option value="">Cake</option>
+                </Select>
             </div>
 
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Number of Products</label>
-                <input placeholder="0" value="" readonly
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 bg-gray-50 focus:outline-none"
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Available Stocks</label>
+                <input placeholder="Ex. 10" value=""
+                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 bg-white focus:outline-none"
                     type="number">
-                <span class="text-[12px] text-gray-500">This is automatically calculated based on products in this
-                    category</span>
             </div>
 
             <div class="flex flex-col gap-[5px]">
@@ -184,11 +183,11 @@
                 <div class="flex items-center gap-[20px]">
                     <div class="flex items-center gap-[10px]">
                         <input type="radio" name="status" class="cursor-pointer scale-150" checked>
-                        <label class="text-[16px]" for="">Active</label>
+                        <label class="text-[16px]" for="">Available</label>
                     </div>
                     <div class="flex items-center gap-[10px]">
                         <input type="radio" name="status" class="cursor-pointer scale-150">
-                        <label class="text-[16px]" for="">Hidden</label>
+                        <label class="text-[16px]" for="">Unavailable</label>
                     </div>
                 </div>
             </div>
@@ -629,7 +628,7 @@
                                     Cakes
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    $25.00
+                                    ₱25.00
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     24
@@ -664,10 +663,10 @@
                                     Cupcakes
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    $15.00
+                                    ₱15.00
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    18
+                                    0
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     <div
@@ -699,7 +698,7 @@
                                     Pastries
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    $8.50
+                                    ₱8.50
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     32
