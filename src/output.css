@@ -606,6 +606,9 @@
   .bg-\[\#\] {
     background-color: #;
   }
+  .bg-\[\#ffebbd\] {
+    background-color: #ffebbd;
+  }
   .bg-\[hsla\(171\,100\%\,36\%\,0\)\] {
     background-color: hsla(171,100%,36%,0);
   }
@@ -962,6 +965,27 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         background-color: var(--color-white);
+      }
+    }
+  }
+  .group-hover\:text-gray-500 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-gray-500);
+      }
+    }
+  }
+  .group-hover\:text-gray-600 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-gray-600);
+      }
+    }
+  }
+  .group-hover\:text-gray-700 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-gray-700);
       }
     }
   }
