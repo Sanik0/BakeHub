@@ -50,7 +50,7 @@
     <div id="editModal" class="absolute h-[100vh] hidden items-start p-[100px] justify-center z-999 w-full ">
         <form
             class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
-            <div class="border-b-[1px] border-b-[#] py-[5px] text-[20px] font-semibold text-gray-500">Edt user
+            <div class="border-b-[1px] border-b-[#] py-[5px] text-[20px] font-semibold text-gray-500">Edit order
                 informations</div>
             <div class="flex items-center gap-[20px]">
                 <div class="flex flex-col w-full gap-[5px]">
@@ -67,16 +67,31 @@
                 </div>
             </div>
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Email</label>
-                <input placeholder="Ex: juansantos@gmail.com" value="juansantos@gmail.com"
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    type="email">
-            </div>
-            <div class="flex flex-col w-full gap-[5px]">
                 <label class="text-[14px] text-gray-600 font-semibold" for="">Contact</label>
                 <input placeholder="Ex: 0986512321" value="0986512321"
                     class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
                     type="tel">
+            </div>
+            <div class="flex flex-col w-full gap-[5px]">
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Prodcut</label>
+                <Select class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none">
+                    <option value="">Cupcakes</option>
+                    <option value="">Cake</option>
+                </Select>
+            </div>
+            <div class="flex items-center gap-[20px]">
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Piece</label>
+                    <input placeholder="Ex: 10" value="30"
+                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                        type="number">
+                </div>
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Amount(₱)</label>
+                    <input placeholder="Ex: Santos" value="120.00" readonly
+                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                        type="number" step="0.01">
+                </div>
             </div>
             <div class="flex flex-col w-full gap-[5px]">
                 <label class="text-[14px] text-gray-600 font-semibold" for="">Address</label>
@@ -85,15 +100,19 @@
                     name="" id="">1234 Mabini Street, Quezon City, Philippines</textarea>
             </div>
             <div class="flex flex-col gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Role</label>
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Status</label>
                 <div class="flex items-center gap-[20px]">
                     <div class="flex items-center gap-[10px]">
                         <input type="radio" name="role" class="cursor-pointer  scale-150" checked>
-                        <label class="text-[16px]" for="">Customer</label>
+                        <label class="text-[16px]" for="">Delivered</label>
                     </div>
                     <div class="flex items-center gap-[10px]">
                         <input type="radio" name="role" class="cursor-pointer  scale-150">
-                        <label class="text-[16px]" for="">Admin</label>
+                        <label class="text-[16px]" for="">In-Transit</label>
+                    </div>
+                    <div class="flex items-center gap-[10px]">
+                        <input type="radio" name="role" class="cursor-pointer  scale-150">
+                        <label class="text-[16px]" for="">Processing</label>
                     </div>
                 </div>
             </div>
