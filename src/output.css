@@ -702,11 +702,17 @@
   .fill-\[\#B9AC8F\] {
     fill: #B9AC8F;
   }
+  .fill-amber-300 {
+    fill: var(--color-amber-300);
+  }
   .fill-black {
     fill: var(--color-black);
   }
   .fill-red-500 {
     fill: var(--color-red-500);
+  }
+  .stroke-black {
+    stroke: var(--color-black);
   }
   .object-cover {
     object-fit: cover;
