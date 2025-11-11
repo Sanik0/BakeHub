@@ -655,43 +655,114 @@
                             <tr class="bg-[#F1F4F9] px-[10px] py-[15px]">
                                 <th
                                     class="text-[14px] rounded-tl-[10px] rounded-bl-[10px] px-[10px] py-[15px] font-semibold text-start">
-                                    Order ID</th>
-                                <th
-                                    class="text-[14px] px-[10px] py-[15px] px-[10px] py-[15px] font-semibold text-start">
-                                    Name</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Product</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Date ordered
+                                    Title
                                 </th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Amount</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Piece</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Status</th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">
+                                    Description
+                                </th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">
+                                    Date Created
+                                </th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">
+                                    Products
+                                </th>
+                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">
+                                    Status
+                                </th>
                                 <th
                                     class="text-[14px] rounded-tr-[10px] rounded-br-[10px] px-[10px] py-[15px] font-semibold text-start">
-                                    Actions</th>
+                                    Actions
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    0001
+                                    Cakes
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Juan Santos</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Cupcakes</td>
+                                    Delicious homemade cakes for all occasions
+                                </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     12.09.2025
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    ₱34,295
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    8,907
+                                    24
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     <div
                                         class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Delivered
+                                        Active
+                                    </div>
+                                </td>
+                                <td
+                                    class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
+                                    <div id="editBtn"
+                                        class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Edit
+                                    </div>
+                                    <div id="deleteBtn"
+                                        class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Delete
+                                    </div>
+                                    <div id="viewBtn"
+                                        class="text-[#155dfc] hover:bg-[rgba(21,93,252,.3)] transition-all duration-300 cursor-pointer bg-[rgba(21,93,252,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        View
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Cupcakes
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Sweet and colorful cupcakes with various flavors
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    10.15.2025
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    18
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    <div
+                                        class="text-[#6C757D] bg-[rgba(108,117,125,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Hidden
+                                    </div>
+                                </td>
+                                <td
+                                    class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
+                                    <div id="editBtn"
+                                        class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Edit
+                                    </div>
+                                    <div id="deleteBtn"
+                                        class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Delete
+                                    </div>
+                                    <div id="viewBtn"
+                                        class="text-[#155dfc] hover:bg-[rgba(21,93,252,.3)] transition-all duration-300 cursor-pointer bg-[rgba(21,93,252,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        View
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Pastries
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Fresh baked pastries and bread daily
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    11.05.2025
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    32
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    <div
+                                        class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                        Active
                                     </div>
                                 </td>
                                 <td
@@ -712,7 +783,6 @@
                             </tr>
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </section>

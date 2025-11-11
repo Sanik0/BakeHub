@@ -651,6 +651,9 @@
   .bg-\[rgba\(21\,93\,252\,\.2\)\] {
     background-color: rgba(21,93,252,.2);
   }
+  .bg-\[rgba\(108\,117\,125\,\.2\)\] {
+    background-color: rgba(108,117,125,.2);
+  }
   .bg-\[rgba\(110\,\)\] {
     background-color: rgba(110,);
   }
@@ -846,6 +849,9 @@
   }
   .text-\[\#00B69B\] {
     color: #00B69B;
+  }
+  .text-\[\#6C757D\] {
+    color: #6C757D;
   }
   .text-\[\#155dfc\] {
     color: #155dfc;
