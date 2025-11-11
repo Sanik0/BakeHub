@@ -31,7 +31,9 @@
                     </svg>
                 </div>
                 <h3 class="text-[20px] font-semibold">Are you sure?</h3>
-                <p class="text-[16px] text-gray-500 font-medium max-w-[357px] text-center">This will delete all the product records connected to<span class="text-[#FF383C]"> Cakes.</span> This action cannot be undone.</p>
+                <p class="text-[16px] text-gray-500 font-medium max-w-[357px] text-center">This will delete all the
+                    product records connected to<span class="text-[#FF383C]"> Cakes.</span> This action cannot be
+                    undone.</p>
             </div>
             <div class="flex w-full flex-col gap-[15px]">
                 <button
@@ -51,11 +53,11 @@
         <form
             class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
             <div class="border-b-[1px] border-b-[#E0E0E0] py-[5px] text-[20px] font-semibold text-gray-500">Edit
-                category
+                Product
                 information</div>
 
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Category Image</label>
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Product Image</label>
                 <div class="flex flex-col gap-[10px]">
                     <div
                         class="w-full h-[200px] border-2 border-dashed border-gray-300 rounded-[10px] flex items-center justify-center overflow-hidden bg-gray-50">
@@ -76,26 +78,26 @@
             </div>
 
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Title</label>
-                <input placeholder="Ex: Cakes" value="Cakes"
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Prodcut name</label>
+                <input placeholder="Ex: Cakes" value="Chocolate Cake"
                     class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
                     type="text">
             </div>
 
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Description</label>
-                <textarea placeholder="Ex: Delicious homemade cakes for all occasions"
-                    class="rounded-[5px] resize-none min-h-[100px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    name="" id="">Delicious homemade cakes for all occasions</textarea>
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Category</label>
+                <Select
+                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none">
+                    <option value="">Cupcakes</option>
+                    <option value="">Cake</option>
+                </Select>
             </div>
 
             <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Number of Products</label>
-                <input placeholder="0" value="24" readonly
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Available Stocks</label>
+                <input placeholder="0" value="24"
                     class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 bg-gray-50 focus:outline-none"
                     type="number">
-                <span class="text-[12px] text-gray-500">This is automatically calculated based on products in this
-                    category</span>
             </div>
 
             <div class="flex flex-col gap-[5px]">
@@ -103,11 +105,11 @@
                 <div class="flex items-center gap-[20px]">
                     <div class="flex items-center gap-[10px]">
                         <input type="radio" name="status" class="cursor-pointer scale-150" checked>
-                        <label class="text-[16px]" for="">Active</label>
+                        <label class="text-[16px]" for="">Available</label>
                     </div>
                     <div class="flex items-center gap-[10px]">
                         <input type="radio" name="status" class="cursor-pointer scale-150">
-                        <label class="text-[16px]" for="">Hidden</label>
+                        <label class="text-[16px]" for="">Unavailable</label>
                     </div>
                 </div>
             </div>
@@ -222,7 +224,8 @@
             <div class="flex flex-col gap-[15px]">
                 <div class="flex items-center gap-[15px] justify-between ">
                     <div class="text-[16px] text-gray-400 font-medium">Description:</div>
-                    <div class="text-[16px] text-gray-700 font-medium text-end">Delicious homemade cakes <br>for all occasions</div>
+                    <div class="text-[16px] text-gray-700 font-medium text-end">Delicious homemade cakes <br>for all
+                        occasions</div>
                 </div>
                 <div class="flex items-center gap-[15px] justify-between ">
                     <div class="text-[16px] text-gray-400 font-medium">Date Created:</div>
@@ -321,10 +324,10 @@
                 </div>
 
                 <div class="group w-full flex items-center gap-[30px]">
-                    <div class="w-[5px] h-[53px] bg-[#ffebbd] rounded-br-[20px] rounded-tr-[20px]"></div>
+                    <div class="w-[5px] h-[53px] bg-white rounded-br-[20px] rounded-tr-[20px]"></div>
                     <div
-                        class="rounded-[6px] w-full max-w-[172px] transition-all duration-300 cursor-pointer group-hover:bg-[#ffebbd] flex bg-[#FBEDCD] text-[16px] font-medium text-[#896008] items-center gap-[15px] px-[20px] py-[15px]">
-                        <svg class="fill-[#896008]" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        class="rounded-[6px] w-full max-w-[172px] transition-all duration-300 cursor-pointer group-hover:bg-white flex bg-white text-[16px] font-medium text-black items-center gap-[15px] px-[20px] py-[15px]">
+                        <svg class="fill-black" width="20" height="20" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1_687)">
                                 <path
@@ -347,13 +350,14 @@
                 </div>
 
                 <div class="group w-full flex items-center gap-[30px]">
-                    <div class="w-[5px] h-[53px] bg-white rounded-br-[20px] rounded-tr-[20px]"></div>
+                    <div class="w-[5px] h-[53px] bg-[#ffebbd] rounded-br-[20px] rounded-tr-[20px]"></div>
                     <div
-                        class="rounded-[6px] w-full max-w-[172px] transition-all duration-300 cursor-pointer group-hover:bg-white flex bg-white text-[16px] font-medium text-black items-center gap-[15px] px-[20px] py-[15px]">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        class="rounded-[6px] w-full max-w-[172px] transition-all duration-300 cursor-pointer group-hover:bg-[#ffebbd] flex bg-[#FBEDCD] text-[16px] font-medium text-[#896008] items-center gap-[15px] px-[20px] py-[15px]">
+                        <svg class="fill-[#896008]" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M19.1667 15.833V14.1664C19.1636 11.8808 18.3077 9.67868 16.7663 7.99106C15.225 6.30344 13.1093 5.25187 10.8333 5.04221V3.93554C11.1511 3.7521 11.3994 3.46894 11.5398 3.12997C11.6802 2.79101 11.7048 2.41519 11.6099 2.0608C11.5149 1.70641 11.3057 1.39326 11.0146 1.16991C10.7235 0.946563 10.3669 0.8255 10 0.8255C9.63311 0.8255 9.27647 0.946563 8.9854 1.16991C8.69432 1.39326 8.48508 1.70641 8.39012 2.0608C8.29517 2.41519 8.3198 2.79101 8.4602 3.12997C8.6006 3.46894 8.84893 3.7521 9.16667 3.93554V5.04221C6.89074 5.25187 4.77501 6.30344 3.23367 7.99106C1.69233 9.67868 0.836359 11.8808 0.833333 14.1664V15.833C0.61232 15.833 0.400358 15.9208 0.244078 16.0771C0.0877974 16.2334 0 16.4454 0 16.6664C0 16.8874 0.0877974 17.0994 0.244078 17.2556C0.400358 17.4119 0.61232 17.4997 0.833333 17.4997H19.1667C19.3877 17.4997 19.5996 17.4119 19.7559 17.2556C19.9122 17.0994 20 16.8874 20 16.6664C20 16.4454 19.9122 16.2334 19.7559 16.0771C19.5996 15.9208 19.3877 15.833 19.1667 15.833ZM2.5 14.1664C2.89417 4.22138 17.1092 4.22888 17.5 14.1664V15.833H2.5V14.1664Z"
-                                fill="black" />
+                                fill="" />
                         </svg>
                         Menu
                     </div>
@@ -596,16 +600,16 @@
                             <tr class="bg-[#F1F4F9] px-[10px] py-[15px]">
                                 <th
                                     class="text-[14px] rounded-tl-[10px] rounded-bl-[10px] px-[10px] py-[15px] font-semibold text-start">
-                                    Title
+                                    Product Name
                                 </th>
                                 <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">
-                                    Description
+                                    Category
                                 </th>
                                 <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">
-                                    Date Created
+                                    Price
                                 </th>
                                 <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">
-                                    Products
+                                    Stock
                                 </th>
                                 <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">
                                     Status
@@ -619,13 +623,13 @@
                         <tbody>
                             <tr>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Chocolate Cake
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     Cakes
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Delicious homemade cakes for all occasions
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    12.09.2025
+                                    $25.00
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     24
@@ -633,7 +637,7 @@
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     <div
                                         class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Active
+                                        Available
                                     </div>
                                 </td>
                                 <td
@@ -654,13 +658,13 @@
                             </tr>
                             <tr>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Vanilla Cupcakes
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     Cupcakes
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Sweet and colorful cupcakes with various flavors
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    10.15.2025
+                                    $15.00
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     18
@@ -668,7 +672,7 @@
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     <div
                                         class="text-[#6C757D] bg-[rgba(108,117,125,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Hidden
+                                        Unavailable
                                     </div>
                                 </td>
                                 <td
@@ -689,13 +693,13 @@
                             </tr>
                             <tr>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
+                                    Croissant
+                                </td>
+                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     Pastries
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Fresh baked pastries and bread daily
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    11.05.2025
+                                    $8.50
                                 </td>
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     32
@@ -703,7 +707,7 @@
                                 <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
                                     <div
                                         class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Active
+                                        Available
                                     </div>
                                 </td>
                                 <td
