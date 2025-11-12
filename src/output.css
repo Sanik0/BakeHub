@@ -215,6 +215,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -250,6 +253,12 @@
   }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-\[5px\] {
+    margin-bottom: 5px;
+  }
+  .mb-\[15px\] {
+    margin-bottom: 15px;
   }
   .mb-\[20px\] {
     margin-bottom: 20px;
@@ -422,14 +431,35 @@
   .w-full {
     width: 100%;
   }
+  .max-w-\[1\] {
+    max-width: 1;
+  }
   .max-w-\[2\] {
     max-width: 2;
+  }
+  .max-w-\[10px\] {
+    max-width: 10px;
+  }
+  .max-w-\[15px\] {
+    max-width: 15px;
   }
   .max-w-\[58\] {
     max-width: 58;
   }
+  .max-w-\[150px\] {
+    max-width: 150px;
+  }
   .max-w-\[172px\] {
     max-width: 172px;
+  }
+  .max-w-\[180px\] {
+    max-width: 180px;
+  }
+  .max-w-\[190px\] {
+    max-width: 190px;
+  }
+  .max-w-\[200px\] {
+    max-width: 200px;
   }
   .max-w-\[240px\] {
     max-width: 240px;
@@ -437,14 +467,26 @@
   .max-w-\[286px\] {
     max-width: 286px;
   }
+  .max-w-\[300px\] {
+    max-width: 300px;
+  }
   .max-w-\[333px\] {
     max-width: 333px;
+  }
+  .max-w-\[350px\] {
+    max-width: 350px;
   }
   .max-w-\[357px\] {
     max-width: 357px;
   }
+  .max-w-\[400px\] {
+    max-width: 400px;
+  }
   .max-w-\[582px\] {
     max-width: 582px;
+  }
+  .min-w-0 {
+    min-width: calc(var(--spacing) * 0);
   }
   .min-w-\[35px\] {
     min-width: 35px;
@@ -463,6 +505,10 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .-translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
@@ -858,6 +904,9 @@
   .fill-\[\#B9AC8F\] {
     fill: #B9AC8F;
   }
+  .fill-\[\#\] {
+    fill: #;
+  }
   .fill-amber-300 {
     fill: var(--color-amber-300);
   }
@@ -887,6 +936,9 @@
   }
   .p-\[15px\] {
     padding: 15px;
+  }
+  .p-\[20px\] {
+    padding: 20px;
   }
   .p-\[30px\] {
     padding: 30px;
@@ -1003,6 +1055,9 @@
   .text-\[16px\] {
     font-size: 16px;
   }
+  .text-\[18px\] {
+    font-size: 18px;
+  }
   .text-\[20px\] {
     font-size: 20px;
   }
@@ -1079,6 +1134,9 @@
   .text-\[\#\] {
     color: #;
   }
+  .text-\[1\] {
+    color: 1;
+  }
   .text-\[16p\] {
     color: 16p;
   }
@@ -1093,6 +1151,9 @@
   }
   .text-blue-700 {
     color: var(--color-blue-700);
+  }
+  .text-gray-100 {
+    color: var(--color-gray-100);
   }
   .text-gray-300 {
     color: var(--color-gray-300);
