@@ -828,6 +828,9 @@
   .bg-\[\#00b69b33\] {
     background-color: #00b69b33;
   }
+  .bg-\[\#155dfc\] {
+    background-color: #155dfc;
+  }
   .bg-\[\#4379EE\] {
     background-color: #4379EE;
   }
@@ -858,6 +861,9 @@
   .bg-\[hsla\(171\,100\%\,36\%\,0\)\] {
     background-color: hsla(171,100%,36%,0);
   }
+  .bg-\[rgb\(21\,93\,252\)\] {
+    background-color: rgb(21,93,252);
+  }
   .bg-\[rgb\(255\,56\,60\)\] {
     background-color: rgb(255,56,60);
   }
@@ -876,8 +882,17 @@
   .bg-\[rgba\(0\,182\,155\,\.2\)\] {
     background-color: rgba(0,182,155,.2);
   }
+  .bg-\[rgba\(21\,93\,252\)\] {
+    background-color: rgba(21,93,252);
+  }
   .bg-\[rgba\(21\,93\,252\,\.2\)\] {
     background-color: rgba(21,93,252,.2);
+  }
+  .bg-\[rgba\(21\,93\,252\,0\.2\)\] {
+    background-color: rgba(21,93,252,0.2);
+  }
+  .bg-\[rgba\(21\,93\,252\,0\.5\)\] {
+    background-color: rgba(21,93,252,0.5);
   }
   .bg-\[rgba\(108\,117\,125\,\.2\)\] {
     background-color: rgba(108,117,125,.2);
@@ -1618,6 +1633,20 @@
     &:hover {
       @media (hover: hover) {
         background-color: rgba(21,93,252,.3);
+      }
+    }
+  }
+  .hover\:bg-\[rgba\(21\,93\,252\,0\.2\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgba(21,93,252,0.2);
+      }
+    }
+  }
+  .hover\:bg-\[rgba\(21\,93\,252\,0\.3\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgba(21,93,252,0.3);
       }
     }
   }
