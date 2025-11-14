@@ -15,10 +15,46 @@
         rel="stylesheet">
     <!-- CHARTS.JS SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @keyframes slideDownUp {
+            0% {
+                transform: translateY(-40px);
+                opacity: 0;
+            }
+
+            20% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            70% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-40px);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-[#F5F6FA] font-poppins ">
     <main class="flex relative">
+        <!-- POP UP ALERT -->
+        <div class="bubble fixed flex w-full mt-[30px] items-center justify-center">
+            <div class="flex w-fit items-center p-4 mb-4 text-sm text-[#4BB543] rounded-[10px] bg-[#b8ffb3] border border-[#4BB543]"
+               style="animation: slideDownUp 2s ease-out forwards;">
+                <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span class="font-medium me-1">User added!</span> Ronan Sanico has been successfully added.
+            </div>
+        </div>
         <!-- SIDEBAR SECTION -->
         <section
             class="w-full fixed flex flex-col gap-[30px] max-w-[240px] h-[100vh] py-[30px] border-l bg-white border-[1px] border-[#E0E0E0]">

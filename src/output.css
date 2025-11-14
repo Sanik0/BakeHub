@@ -19,6 +19,7 @@
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-green-600: oklch(62.7% 0.194 149.214);
     --color-teal-100: oklch(95.3% 0.051 180.801);
     --color-teal-500: oklch(70.4% 0.14 182.503);
     --color-teal-700: oklch(51.1% 0.096 186.391);
@@ -59,6 +60,7 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -214,6 +216,9 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
   .sr-only {
     position: absolute;
     width: 1px;
@@ -261,6 +266,12 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .me-1 {
+    margin-inline-end: calc(var(--spacing) * 1);
+  }
+  .me-2 {
+    margin-inline-end: calc(var(--spacing) * 2);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -272,6 +283,9 @@
   }
   .mt-\[20px\] {
     margin-top: 20px;
+  }
+  .mt-\[30px\] {
+    margin-top: 30px;
   }
   .mr-\[2px\] {
     margin-right: 2px;
@@ -590,6 +604,9 @@
     --tw-scale-z: 500%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -783,6 +800,9 @@
     --tw-border-style: none;
     border-style: none;
   }
+  .border-\[\#4BB543\] {
+    border-color: #4BB543;
+  }
   .border-\[\#E0E0E0\] {
     border-color: #E0E0E0;
   }
@@ -828,6 +848,9 @@
   .bg-\[\#00b69b33\] {
     background-color: #00b69b33;
   }
+  .bg-\[\#4BB543\] {
+    background-color: #4BB543;
+  }
   .bg-\[\#155dfc\] {
     background-color: #155dfc;
   }
@@ -855,6 +878,9 @@
   .bg-\[\#\] {
     background-color: #;
   }
+  .bg-\[\#b8ffb3\] {
+    background-color: #b8ffb3;
+  }
   .bg-\[\#ffebbd\] {
     background-color: #ffebbd;
   }
@@ -863,6 +889,9 @@
   }
   .bg-\[rgb\(21\,93\,252\)\] {
     background-color: rgb(21,93,252);
+  }
+  .bg-\[rgb\(75\,181\,67\)\] {
+    background-color: rgb(75,181,67);
   }
   .bg-\[rgb\(255\,56\,60\)\] {
     background-color: rgb(255,56,60);
@@ -893,6 +922,12 @@
   }
   .bg-\[rgba\(21\,93\,252\,0\.5\)\] {
     background-color: rgba(21,93,252,0.5);
+  }
+  .bg-\[rgba\(75\,181\,67\)\] {
+    background-color: rgba(75,181,67);
+  }
+  .bg-\[rgba\(75\,181\,67\,0\.2\)\] {
+    background-color: rgba(75,181,67,0.2);
   }
   .bg-\[rgba\(108\,117\,125\,\.2\)\] {
     background-color: rgba(108,117,125,.2);
@@ -956,6 +991,9 @@
   }
   .bg-green-500 {
     background-color: var(--color-green-500);
+  }
+  .bg-green-600 {
+    background-color: var(--color-green-600);
   }
   .bg-orange-500 {
     background-color: var(--color-orange-500);
@@ -1198,6 +1236,9 @@
   .text-\[\#00B69B\] {
     color: #00B69B;
   }
+  .text-\[\#4BB543\] {
+    color: #4BB543;
+  }
   .text-\[\#6C757D\] {
     color: #6C757D;
   }
@@ -1368,6 +1409,10 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .ease-out {
+    --tw-ease: var(--ease-out);
+    transition-timing-function: var(--ease-out);
   }
   .outline-none {
     --tw-outline-style: none;
@@ -1883,6 +1928,26 @@
   inherits: false;
   initial-value: 1;
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -2024,6 +2089,10 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-content {
   syntax: "*";
   initial-value: "";
@@ -2038,6 +2107,11 @@
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
@@ -2070,6 +2144,7 @@
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
       --tw-duration: initial;
+      --tw-ease: initial;
       --tw-content: "";
     }
   }
