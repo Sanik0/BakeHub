@@ -15,56 +15,20 @@
         rel="stylesheet">
     <!-- CHARTS.JS SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        @keyframes slideDownUp {
-            0% {
-                transform: translateY(-40px);
-                opacity: 0;
-            }
-
-            20% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
-            70% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(-40px);
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
-    </style>
 </head>
 
-<body class="bg-[#F5F6FA] font-poppins ">
+<body class="bg-[#F5F6FA] relative font-poppins ">
     <main class="flex relative">
-        <!-- POP UP ALERT -->
-        <div class="bubble fixed flex w-full mt-[30px] items-center justify-center">
-            <div class="flex w-fit items-center p-4 mb-4 text-sm text-[#4BB543] rounded-[10px] bg-[#b8ffb3] border border-[#4BB543]"
-               style="animation: slideDownUp 2s ease-out forwards;">
-                <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
-                <span class="font-medium me-1">User added!</span> Ronan Sanico has been successfully added.
-            </div>
-        </div>
         <!-- SIDEBAR SECTION -->
         <section
             class="w-full fixed flex flex-col gap-[30px] max-w-[240px] h-[100vh] py-[30px] border-l bg-white border-[1px] border-[#E0E0E0]">
             <div class="text-[20px] w-full text-center font-bold"><span class="text-[#896008]">Bake</span>Hub</div>
             <nav class="w-full flex flex-col gap-[10px]">
                 <div class="group hover:opacity-[0.5] transtion-all duration-300 w-full flex items-center gap-[30px]">
-                    <div class="w-[5px] h-[53px] bg-[#FBEDCD] rounded-br-[20px] rounded-tr-[20px]"></div>
+                    <div class="w-[5px] h-[53px] bg-white rounded-br-[20px] rounded-tr-[20px]"></div>
                     <div
-                        class="rounded-[6px] max-w-[172px] w-full transition-all duration-300 cursor-pointer group-hover:bg-[#ffebbd] flex bg-[#FBEDCD] text-[16px] font-medium text-[#896008] items-center gap-[15px] px-[20px] py-[15px]">
-                        <svg class="h-[20px] w-[20px] fill-[#896008]" width="20" height="20" viewBox="0 0 20 20"
+                        class="rounded-[6px] max-w-[172px] w-full transition-all duration-300 cursor-pointer group-hover:bg-white flex bg-white text-[16px] font-medium text-black items-center gap-[15px] px-[20px] py-[15px]">
+                        <svg class="h-[20px] w-[20px] fill-black" width="20" height="20" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1_665)">
                                 <path
@@ -91,15 +55,14 @@
                 <div class="group hover:opacity-[0.5] transtion-all duration-300 w-full flex items-center gap-[30px]">
                     <div class="w-[5px] h-[53px] bg-white rounded-br-[20px] rounded-tr-[20px]"></div>
                     <div
-                        class="rounded-[6px] w-full max-w-[172px] transition-all duration-300 cursor-pointer group-hover:bg-white flex bg-white text-[16px] font-medium text-black items-center gap-[15px] px-[20px] py-[15px]">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        class="rounded-[6px] max-w-[172px] w-full transition-all duration-300 cursor-pointer group-hover:bg-white flex bg-white text-[16px] font-medium text-black items-center gap-[15px] px-[20px] py-[15px]">
+                        <svg class="fill-[black]" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1_736)">
                                 <path
-                                    d="M10 9.99994C10.9889 9.99994 11.9556 9.7067 12.7779 9.15729C13.6001 8.60788 14.241 7.82699 14.6194 6.91336C14.9978 5.99973 15.0969 4.99439 14.9039 4.02449C14.711 3.05458 14.2348 2.16367 13.5355 1.46441C12.8363 0.765145 11.9454 0.288941 10.9755 0.0960148C10.0055 -0.0969113 9.00021 0.00210539 8.08658 0.380544C7.17295 0.758982 6.39206 1.39984 5.84265 2.22209C5.29324 3.04434 5 4.01103 5 4.99994C5.00132 6.32562 5.52853 7.59662 6.46593 8.53401C7.40332 9.47141 8.67432 9.99862 10 9.99994ZM10 1.66661C10.6593 1.66661 11.3037 1.8621 11.8519 2.22838C12.4001 2.59465 12.8273 3.11524 13.0796 3.72433C13.3319 4.33342 13.3979 5.00364 13.2693 5.65024C13.1407 6.29685 12.8232 6.89079 12.357 7.35696C11.8908 7.82314 11.2969 8.14061 10.6503 8.26923C10.0037 8.39784 9.33348 8.33183 8.72439 8.07954C8.1153 7.82725 7.59471 7.40001 7.22844 6.85184C6.86216 6.30368 6.66667 5.65921 6.66667 4.99994C6.66667 4.11589 7.01786 3.26804 7.64298 2.64292C8.2681 2.0178 9.11595 1.66661 10 1.66661Z"
-                                    fill="black" />
+                                    d="M10 9.99994C10.9889 9.99994 11.9556 9.7067 12.7779 9.15729C13.6001 8.60788 14.241 7.82699 14.6194 6.91336C14.9978 5.99973 15.0969 4.99439 14.9039 4.02449C14.711 3.05458 14.2348 2.16367 13.5355 1.46441C12.8363 0.765145 11.9454 0.288941 10.9755 0.0960148C10.0055 -0.0969113 9.00021 0.00210539 8.08658 0.380544C7.17295 0.758982 6.39206 1.39984 5.84265 2.22209C5.29324 3.04434 5 4.01103 5 4.99994C5.00132 6.32562 5.52853 7.59662 6.46593 8.53401C7.40332 9.47141 8.67432 9.99862 10 9.99994ZM10 1.66661C10.6593 1.66661 11.3037 1.8621 11.8519 2.22838C12.4001 2.59465 12.8273 3.11524 13.0796 3.72433C13.3319 4.33342 13.3979 5.00364 13.2693 5.65024C13.1407 6.29685 12.8232 6.89079 12.357 7.35696C11.8908 7.82314 11.2969 8.14061 10.6503 8.26923C10.0037 8.39784 9.33348 8.33183 8.72439 8.07954C8.1153 7.82725 7.59471 7.40001 7.22844 6.85184C6.86216 6.30368 6.66667 5.65921 6.66667 4.99994C6.66667 4.11589 7.01786 3.26804 7.64298 2.64292C8.2681 2.0178 9.11595 1.66661 10 1.66661Z" />
                                 <path
-                                    d="M10 11.6672C8.01155 11.6694 6.10518 12.4603 4.69914 13.8663C3.29309 15.2724 2.50221 17.1787 2.5 19.1672C2.5 19.3882 2.5878 19.6002 2.74408 19.7564C2.90036 19.9127 3.11232 20.0005 3.33333 20.0005C3.55435 20.0005 3.76631 19.9127 3.92259 19.7564C4.07887 19.6002 4.16667 19.3882 4.16667 19.1672C4.16667 17.6201 4.78125 16.1363 5.87521 15.0424C6.96917 13.9484 8.4529 13.3338 10 13.3338C11.5471 13.3338 13.0308 13.9484 14.1248 15.0424C15.2188 16.1363 15.8333 17.6201 15.8333 19.1672C15.8333 19.3882 15.9211 19.6002 16.0774 19.7564C16.2337 19.9127 16.4457 20.0005 16.6667 20.0005C16.8877 20.0005 17.0996 19.9127 17.2559 19.7564C17.4122 19.6002 17.5 19.3882 17.5 19.1672C17.4978 17.1787 16.7069 15.2724 15.3009 13.8663C13.8948 12.4603 11.9884 11.6694 10 11.6672Z"
-                                    fill="black" />
+                                    d="M10 11.6672C8.01155 11.6694 6.10518 12.4603 4.69914 13.8663C3.29309 15.2724 2.50221 17.1787 2.5 19.1672C2.5 19.3882 2.5878 19.6002 2.74408 19.7564C2.90036 19.9127 3.11232 20.0005 3.33333 20.0005C3.55435 20.0005 3.76631 19.9127 3.92259 19.7564C4.07887 19.6002 4.16667 19.3882 4.16667 19.1672C4.16667 17.6201 4.78125 16.1363 5.87521 15.0424C6.96917 13.9484 8.4529 13.3338 10 13.3338C11.5471 13.3338 13.0308 13.9484 14.1248 15.0424C15.2188 16.1363 15.8333 17.6201 15.8333 19.1672C15.8333 19.3882 15.9211 19.6002 16.0774 19.7564C16.2337 19.9127 16.4457 20.0005 16.6667 20.0005C16.8877 20.0005 17.0996 19.9127 17.2559 19.7564C17.4122 19.6002 17.5 19.3882 17.5 19.1672C17.4978 17.1787 16.7069 15.2724 15.3009 13.8663C13.8948 12.4603 11.9884 11.6694 10 11.6672Z" />
                             </g>
                             <defs>
                                 <clipPath id="clip0_1_736">
@@ -107,7 +70,6 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
                         Users
                     </div>
                 </div>
@@ -235,20 +197,23 @@
             <div
                 class="w-full border-b-[#E0E0E0] border-b-[1px] justify-between items-center flex bg-white px-[28px] py-[7px]">
                 <form class="flex gap-[30px] items-center">
-                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1.25 7.75001H28.75C29.0815 7.75001 29.3995 7.61393 29.6339 7.37169C29.8683 7.12946 30 6.80092 30 6.45835C30 6.11578 29.8683 5.78724 29.6339 5.54501C29.3995 5.30277 29.0815 5.16669 28.75 5.16669H1.25C0.918479 5.16669 0.600537 5.30277 0.366117 5.54501C0.131696 5.78724 0 6.11578 0 6.45835C0 6.80092 0.131696 7.12946 0.366117 7.37169C0.600537 7.61393 0.918479 7.75001 1.25 7.75001Z"
-                            fill="#8A8A8A" />
-                        <path
-                            d="M28.75 11.625H1.25C0.918479 11.625 0.600537 11.7611 0.366117 12.0033C0.131696 12.2456 0 12.5741 0 12.9167C0 13.2592 0.131696 13.5878 0.366117 13.83C0.600537 14.0722 0.918479 14.2083 1.25 14.2083H28.75C29.0815 14.2083 29.3995 14.0722 29.6339 13.83C29.8683 13.5878 30 13.2592 30 12.9167C30 12.5741 29.8683 12.2456 29.6339 12.0033C29.3995 11.7611 29.0815 11.625 28.75 11.625Z"
-                            fill="#8A8A8A" />
-                        <path
-                            d="M28.75 24.5416H1.25C0.918479 24.5416 0.600537 24.6777 0.366117 24.92C0.131696 25.1622 0 25.4907 0 25.8333C0 26.1759 0.131696 26.5044 0.366117 26.7467C0.600537 26.9889 0.918479 27.125 1.25 27.125H28.75C29.0815 27.125 29.3995 26.9889 29.6339 26.7467C29.8683 26.5044 30 26.1759 30 25.8333C30 25.4907 29.8683 25.1622 29.6339 24.92C29.3995 24.6777 29.0815 24.5416 28.75 24.5416Z"
-                            fill="#8A8A8A" />
-                        <path
-                            d="M28.75 18.0834H1.25C0.918479 18.0834 0.600537 18.2195 0.366117 18.4617C0.131696 18.7039 0 19.0325 0 19.375C0 19.7176 0.131696 20.0462 0.366117 20.2884C0.600537 20.5306 0.918479 20.6667 1.25 20.6667H28.75C29.0815 20.6667 29.3995 20.5306 29.6339 20.2884C29.8683 20.0462 30 19.7176 30 19.375C30 19.0325 29.8683 18.7039 29.6339 18.4617C29.3995 18.2195 29.0815 18.0834 28.75 18.0834Z"
-                            fill="#8A8A8A" />
-                    </svg>
+                    <div
+                        class="p-[10px] flex items-center justify-center rounded-[50%] hover:bg-gray-200 cursor-pointer transition-all duration-300 ">
+                        <svg width="30" height="30" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.25 7.75001H28.75C29.0815 7.75001 29.3995 7.61393 29.6339 7.37169C29.8683 7.12946 30 6.80092 30 6.45835C30 6.11578 29.8683 5.78724 29.6339 5.54501C29.3995 5.30277 29.0815 5.16669 28.75 5.16669H1.25C0.918479 5.16669 0.600537 5.30277 0.366117 5.54501C0.131696 5.78724 0 6.11578 0 6.45835C0 6.80092 0.131696 7.12946 0.366117 7.37169C0.600537 7.61393 0.918479 7.75001 1.25 7.75001Z"
+                                fill="#8A8A8A" />
+                            <path
+                                d="M28.75 11.625H1.25C0.918479 11.625 0.600537 11.7611 0.366117 12.0033C0.131696 12.2456 0 12.5741 0 12.9167C0 13.2592 0.131696 13.5878 0.366117 13.83C0.600537 14.0722 0.918479 14.2083 1.25 14.2083H28.75C29.0815 14.2083 29.3995 14.0722 29.6339 13.83C29.8683 13.5878 30 13.2592 30 12.9167C30 12.5741 29.8683 12.2456 29.6339 12.0033C29.3995 11.7611 29.0815 11.625 28.75 11.625Z"
+                                fill="#8A8A8A" />
+                            <path
+                                d="M28.75 24.5416H1.25C0.918479 24.5416 0.600537 24.6777 0.366117 24.92C0.131696 25.1622 0 25.4907 0 25.8333C0 26.1759 0.131696 26.5044 0.366117 26.7467C0.600537 26.9889 0.918479 27.125 1.25 27.125H28.75C29.0815 27.125 29.3995 26.9889 29.6339 26.7467C29.8683 26.5044 30 26.1759 30 25.8333C30 25.4907 29.8683 25.1622 29.6339 24.92C29.3995 24.6777 29.0815 24.5416 28.75 24.5416Z"
+                                fill="#8A8A8A" />
+                            <path
+                                d="M28.75 18.0834H1.25C0.918479 18.0834 0.600537 18.2195 0.366117 18.4617C0.131696 18.7039 0 19.0325 0 19.375C0 19.7176 0.131696 20.0462 0.366117 20.2884C0.600537 20.5306 0.918479 20.6667 1.25 20.6667H28.75C29.0815 20.6667 29.3995 20.5306 29.6339 20.2884C29.8683 20.0462 30 19.7176 30 19.375C30 19.0325 29.8683 18.7039 29.6339 18.4617C29.3995 18.2195 29.0815 18.0834 28.75 18.0834Z"
+                                fill="#8A8A8A" />
+                        </svg>
+                    </div>
                     <div
                         class="rounded-[25px] w-full max-w-[333px] border-[#E0E0E0] border-[1px] px-[15px] py-[10px] flex items-center gap-[15px]">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -299,259 +264,105 @@
             </div>
 
             <!-- main info -->
-            <div class="w-full flex flex-col gap-[50px] p-[30px]">
-                <!-- CARDS -->
-                <div class="w-full flex flex-col gap-[20px]">
-                    <h1 class="text-[32px] font-semibold">Dashboard</h1>
-                    <div class="flex items-center gap-[30px] w-full">
-                        <div class="rounded-[14px] w-full flex flex-col gap-[24px] p-[15px] bg-white">
-                            <div class="flex items-center justify-between">
-                                <div class="flex flex-col gap-[15px]">
-                                    <div class="text-[16px] text-gray-600 font-medium">Total Users</div>
-                                    <h3 class="text-[28px] font-semibold text-black">40,689</h3>
-                                </div>
-                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.21"
-                                        d="M37 0C49.7025 0 60 10.2975 60 23V37C60 49.7025 49.7025 60 37 60H23C10.2975 60 0 49.7025 0 37V23C0 10.2975 10.2975 0 23 0H37Z"
-                                        fill="#8280FF" />
-                                    <path opacity="0.587821"
-                                        d="M37.9996 24.667C40.2088 24.667 41.9996 26.4579 41.9996 28.667C41.9995 30.876 40.2087 32.667 37.9996 32.667C35.7908 32.6668 33.9998 30.8759 33.9996 28.667C33.9996 26.458 35.7906 24.6672 37.9996 24.667ZM25.9996 18C28.945 18 31.3334 20.3876 31.3336 23.333C31.3336 26.2785 28.9452 28.667 25.9996 28.667C23.0543 28.6668 20.6666 26.2784 20.6666 23.333C20.6668 20.3877 23.0544 18.0002 25.9996 18Z"
-                                        fill="#8280FF" />
-                                    <path
-                                        d="M25.9775 31.3333C32.3612 31.3333 37.6062 34.3908 37.9971 40.9329C38.0126 41.1936 37.9967 42.0003 36.9951 42.0003H14.9697C14.6353 41.9999 13.9728 41.2785 14.001 40.932C14.5179 34.5687 19.6825 31.3334 25.9775 31.3333ZM37.4688 34.0023C42.0104 34.0521 45.7188 36.3469 45.998 41.1995C46.0093 41.395 45.9978 42.0003 45.2744 42.0003H40.1338C40.1338 38.9996 39.1417 36.2304 37.4688 34.0023Z"
-                                        fill="#8280FF" />
-                                </svg>
-                            </div>
-                            <div class="text-[16px] flex gap-[5px] font-medium text-gray-500">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16 6L18.29 8.29L13.41 13.17L9.41 9.17L2 16.59L3.41 18L9.41 12L13.41 16L19.71 9.71L22 12V6H16Z"
-                                        fill="#00B69B" />
-                                </svg>
-                                <span class="text-[#00B69B]">8.5%</span> Up from yesterday
-                            </div>
-                        </div>
-                        <div class="rounded-[14px] w-full flex flex-col gap-[24px] p-[15px] bg-white">
-                            <div class="flex items-center justify-between">
-                                <div class="flex flex-col gap-[15px]">
-                                    <div class="text-[16px] text-gray-600 font-medium">Total Orders</div>
-                                    <h3 class="text-[28px] font-semibold text-black">10,293</h3>
-                                </div>
-                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.21"
-                                        d="M37 0C49.7025 0 60 10.2975 60 23V37C60 49.7025 49.7025 60 37 60H23C10.2975 60 0 49.7025 0 37V23C0 10.2975 10.2975 0 23 0H37Z"
-                                        fill="#FEC53D" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M15 24.3165L27.9005 31.7646C28.0394 31.8448 28.1851 31.9027 28.3333 31.9395V46.3847L15.9201 39.0385C15.3498 38.701 15 38.0876 15 37.4249V24.3165ZM45 24.1185V37.4249C45 38.0876 44.6502 38.701 44.0799 39.0385L31.6667 46.3847V31.8129C31.6969 31.7978 31.7269 31.7817 31.7566 31.7646L45 24.1185Z"
-                                        fill="#FEC53D" />
-                                    <path opacity="0.499209" fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M15.4053 20.7014C15.5628 20.5024 15.7617 20.3343 15.9936 20.2108L29.1186 13.2201C29.6696 12.9266 30.3305 12.9266 30.8815 13.2201L44.0065 20.2108C44.1852 20.306 44.3444 20.4277 44.4801 20.5697L30.0899 28.8778C29.9953 28.9325 29.9081 28.995 29.8286 29.064C29.7491 28.995 29.6618 28.9325 29.5672 28.8778L15.4053 20.7014Z"
-                                        fill="#FEC53D" />
-                                </svg>
-
-                            </div>
-                            <div class="text-[16px] flex gap-[5px] font-medium text-gray-500">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16 6L18.29 8.29L13.41 13.17L9.41 9.17L2 16.59L3.41 18L9.41 12L13.41 16L19.71 9.71L22 12V6H16Z"
-                                        fill="#00B69B" />
-                                </svg>
-                                <span class="text-[#00B69B]">1.3%</span> Up from yesterday
-                            </div>
-                        </div>
-                        <div class="rounded-[14px] w-full flex flex-col gap-[24px] p-[15px] bg-white">
-                            <div class="flex items-center justify-between">
-                                <div class="flex flex-col gap-[15px]">
-                                    <div class="text-[16px] text-gray-600 font-medium">Total Sales</div>
-                                    <h3 class="text-[28px] font-semibold text-black">₱89,000</h3>
-                                </div>
-                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.21"
-                                        d="M37 0C49.7025 0 60 10.2975 60 23V37C60 49.7025 49.7025 60 37 60H23C10.2975 60 0 49.7025 0 37V23C0 10.2975 10.2975 0 23 0H37Z"
-                                        fill="#4AD991" />
-                                    <path
-                                        d="M19.1111 40.8889H42.4444C43.3036 40.8889 44 41.5853 44 42.4444C44 43.3036 43.3036 44 42.4444 44H17.5556C16.6964 44 16 43.3036 16 42.4444V17.5556C16 16.6964 16.6964 16 17.5556 16C18.4147 16 19.1111 16.6964 19.1111 17.5556V40.8889Z"
-                                        fill="#4AD991" />
-                                    <path opacity="0.5"
-                                        d="M24.9126 34.175C24.325 34.8018 23.3406 34.8335 22.7138 34.2459C22.0871 33.6584 22.0553 32.674 22.6429 32.0472L28.4762 25.825C29.0445 25.2188 29.9888 25.1663 30.6208 25.7056L35.2248 29.6344L41.2235 22.0361C41.7558 21.3618 42.734 21.2467 43.4083 21.7791C44.0826 22.3114 44.1977 23.2896 43.6653 23.9639L36.6653 32.8306C36.1186 33.5231 35.1059 33.6227 34.4347 33.05L29.7306 29.0358L24.9126 34.175Z"
-                                        fill="#4AD991" />
-                                </svg>
-
-                            </div>
-                            <div class="text-[16px] flex gap-[5px] font-medium text-gray-500">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16 18L18.29 15.71L13.41 10.83L9.41 14.83L2 7.41L3.41 6L9.41 12L13.41 8L19.71 14.29L22 12V18H16Z"
-                                        fill="#F93C65" />
-                                </svg>
-                                <span class="text-[#F93C65]">4.3%</span> Down from yesterday
-                            </div>
-                        </div>
-                        <div class="rounded-[14px] w-full flex flex-col gap-[24px] p-[15px] bg-white">
-                            <div class="flex items-center justify-between">
-                                <div class="flex flex-col gap-[15px]">
-                                    <div class="text-[16px] text-gray-600 font-medium">Total Pending</div>
-                                    <h3 class="text-[28px] font-semibold text-black">2,040</h3>
-                                </div>
-                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.3"
-                                        d="M37 0C49.7025 0 60 10.2975 60 23V37C60 49.7025 49.7025 60 37 60H23C10.2975 60 0 49.7025 0 37V23C0 10.2975 10.2975 0 23 0H37Z"
-                                        fill="#FF9066" />
-                                    <path opacity="0.78" fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M28.6312 23.8088C28.6512 23.5483 28.8684 23.3472 29.1297 23.3472H29.5475C29.8044 23.3472 30.0195 23.5418 30.045 23.7974L30.6667 30.0138L35.0814 32.5366C35.2372 32.6256 35.3333 32.7912 35.3333 32.9707V33.3592C35.3333 33.6889 35.0199 33.9284 34.7018 33.8416L28.3987 32.1226C28.1673 32.0595 28.0133 31.841 28.0317 31.6018L28.6312 23.8088Z"
-                                        fill="#FF9066" />
-                                    <path opacity="0.901274"
-                                        d="M21.8525 15.1903C21.9479 14.7907 22.4575 14.6696 22.7217 14.9842L24.5205 17.1287C26.2036 16.4121 28.0552 16.0135 30 16.0135C37.7319 16.0135 43.9998 22.2817 44 30.0135C44 37.7455 37.732 44.0135 30 44.0135C22.268 44.0135 16 37.7455 16 30.0135C16 28.7005 16.1805 27.4295 16.5186 26.2244L19.0859 26.9451C18.8086 27.934 18.667 28.963 18.667 30.0135C18.667 36.2727 23.7408 41.3475 30 41.3475C36.2592 41.3475 41.333 36.2727 41.333 30.0135C41.3328 23.7544 36.2591 18.6805 30 18.6805C28.7318 18.6805 27.4968 18.8889 26.332 19.2869L28.1328 21.4334C28.3974 21.7487 28.1892 22.2304 27.7783 22.2537L20.7334 22.6532C20.3992 22.672 20.1411 22.3635 20.2188 22.0379L21.8525 15.1903Z"
-                                        fill="#FF9066" />
-                                </svg>
-                            </div>
-                            <div class="text-[16px] flex gap-[5px] font-medium text-gray-500">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16 6L18.29 8.29L13.41 13.17L9.41 9.17L2 16.59L3.41 18L9.41 12L13.41 16L19.71 9.71L22 12V6H16Z"
-                                        fill="#00B69B" />
-                                </svg>
-                                <span class="text-[#00B69B]">1.8%</span> Up from yesterday
-                            </div>
-                        </div>
+            <div class="w-full flex flex-col gap-[30px] p-[30px]">
+                <div class="flex items-start justify-center w-full items-center">
+                      <form
+            class="bg-white w-full max-w-[700px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
+            <div class="border-b-[1px] border-b-[#] py-[5px] text-[20px] font-semibold text-gray-500">Add new order</div>
+            <div class="flex items-center gap-[20px]">
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Firstname</label>
+                    <input placeholder="Ex: Juan" value="Juan"
+                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                        type="text">
+                </div>
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Firstname</label>
+                    <input placeholder="Ex: Santos" value="Santos"
+                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                        type="text">
+                </div>
+            </div>
+            <div class="flex flex-col w-full gap-[5px]">
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Contact</label>
+                <input placeholder="Ex: 0986512321" value="0986512321"
+                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                    type="tel">
+            </div>
+            <div class="flex flex-col w-full gap-[5px]">
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Category</label>
+                <Select
+                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none">
+                    <option value="">Cupcakes</option>
+                    <option value="">Cake</option>
+                </Select>
+            </div>
+            <div class="flex flex-col w-full gap-[5px]">
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Product</label>
+                <Select
+                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none">
+                    <option value="">Sweet Strawberry Cupcakes</option>
+                    <option value="">Cake</option>
+                </Select>
+            </div>
+            <div class="flex items-center gap-[20px]">
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Piece</label>
+                    <input placeholder="Ex: 10" value="30"
+                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                        type="number">
+                </div>
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Amount(₱)</label>
+                    <input placeholder="00.00" value="120.00" readonly
+                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                        type="number" step="0.01">
+                </div>
+            </div>
+            <div class="flex flex-col w-full gap-[5px]">
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Address</label>
+                <textarea placeholder="Ex: 1234 Street, City, Country"
+                    class="rounded-[5px] resize-none min-h-[100px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                    name="" id="">1234 Mabini Street, Quezon City, Philippines</textarea>
+            </div>
+            <div class="flex flex-col gap-[5px]">
+                <label class="text-[14px] text-gray-600 font-semibold" for="">Status</label>
+                <div class="flex items-center gap-[20px]">
+                    <div class="flex items-center gap-[10px]">
+                        <input type="radio" name="role" class="cursor-pointer  scale-150" checked>
+                        <label class="text-[16px]" for="">Delivered</label>
+                    </div>
+                    <div class="flex items-center gap-[10px]">
+                        <input type="radio" name="role" class="cursor-pointer  scale-150">
+                        <label class="text-[16px]" for="">In-Transit</label>
+                    </div>
+                    <div class="flex items-center gap-[10px]">
+                        <input type="radio" name="role" class="cursor-pointer  scale-150">
+                        <label class="text-[16px]" for="">Processing</label>
+                    </div>
+                    <div class="flex items-center gap-[10px]">
+                        <input type="radio" name="role" class="cursor-pointer  scale-150">
+                        <label class="text-[16px]" for="">Cancelled</label>
                     </div>
                 </div>
-                <!-- GRAPH -->
-                <div class="w-full bg-white p-[30px] rounded-[20px] flex flex-col gap-[20px]">
-                    <h3 class="text-[24px] font-semibold">Sales Details</h3>
-                    <div class="h-[444px] w-full">
-                        <canvas id="myChart"></canvas>
-                    </div>
-                </div>
-                <!-- TABLE -->
-                <div class="w-full p-[30px] rounded-[20px] gap-[20px] bg-white flex flex-col">
-                    <h3 class="text-[24px] font-semibold">Order Details</h3>
-                    <table class="w-full">
-                        <thead>
-                            <tr class="bg-[#F1F4F9] px-[10px] py-[15px]">
-                                <th
-                                    class="text-[14px] rounded-tl-[10px] rounded-bl-[10px] px-[10px] py-[15px] font-semibold text-start">
-                                    Product Name</th>
-                                <th
-                                    class="text-[14px] px-[10px] py-[15px] px-[10px] py-[15px] font-semibold text-start">
-                                    Location</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Date-Time</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Piece</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Amount</th>
-                                <th
-                                    class="text-[14px] rounded-tr-[10px] rounded-br-[10px] px-[10px] py-[15px] font-semibold text-start">
-                                    Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
-                                    Cupcake</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
-                                    Batasan</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    12.09.2019 - 12.53 PM</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">423
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">₱34,295
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-start">
-                                    <div
-                                        class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Delivered
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
-                                    Cupcake</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
-                                    Batasan</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    12.09.2019 - 12.53 PM</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">423
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">₱34,295
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-start">
-                                    <div
-                                        class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Delivered
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">Vanilla
-                                    Cupcake</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">63
-                                    Batasan</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    12.09.2019 - 12.53 PM</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">423
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">₱34,295
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-start">
-                                    <div
-                                        class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Delivered
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            </div>
 
+            <div class="flex w-full flex-col gap-[15px]">
+                <button
+                    class="w-full bg-blue-500 cursor-pointer hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
+                    Save
+                </button>
+                <div id="cancelEditBtn"
+                    class="w-full cursor-pointer text-center text-gray-600 bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
+                    Cancel
+                </div>
+            </div>
+        </form>
                 </div>
             </div>
         </section>
 
     </main>
-    <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-
-        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, 'rgba(67, 121, 238, 0.5)');
-        gradient.addColorStop(1, 'rgba(67, 121, 238, 0)');
-
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [150, 190, 300, 190, 275, 150, 285, 290, 350, 300, 450, 560],
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    backgroundColor: gradient,
-                    borderWidth: 2,
-                    fill: true,
-                    tension: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        });
-    </script>
-
 </body>
 
 </html>
