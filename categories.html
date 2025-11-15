@@ -31,7 +31,9 @@
                     </svg>
                 </div>
                 <h3 class="text-[20px] font-semibold">Are you sure?</h3>
-                <p class="text-[16px] text-gray-500 font-medium max-w-[357px] text-center">This will delete all the product records connected to<span class="text-[#FF383C]"> Cakes.</span> This action cannot be undone.</p>
+                <p class="text-[16px] text-gray-500 font-medium max-w-[357px] text-center">This will delete all the
+                    product records connected to<span class="text-[#FF383C]"> Cakes.</span> This action cannot be
+                    undone.</p>
             </div>
             <div class="flex w-full flex-col gap-[15px]">
                 <button
@@ -39,164 +41,6 @@
                     Yes, Delete Category
                 </button>
                 <div id="cancelDeleteBtn"
-                    class="w-full cursor-pointer text-center text-gray-600 bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
-                    Cancel
-                </div>
-            </div>
-        </form>
-    </div>
-    <!-- EDIT MODAL -->
-    <div id="editModal"
-        class="fixed h-[100vh] overflow-y-auto hidden items-start p-[100px] justify-center z-999 w-full ">
-        <form
-            class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
-            <div class="border-b-[1px] border-b-[#E0E0E0] py-[5px] text-[20px] font-semibold text-gray-500">Edit
-                category
-                information</div>
-
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Category Image</label>
-                <div class="flex flex-col gap-[10px]">
-                    <div
-                        class="w-full h-[200px] border-2 border-dashed border-gray-300 rounded-[10px] flex items-center justify-center overflow-hidden bg-gray-50">
-                        <img id="imagePreview" src="" alt="Category preview" class="w-full h-full object-cover hidden">
-                        <div id="imagePlaceholder" class="flex flex-col items-center gap-[10px] text-gray-400">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M21 19V5C21 3.9 20.1 3 19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19ZM8.5 13.5L11 16.51L14.5 12L19 18H5L8.5 13.5Z"
-                                    fill="currentColor" />
-                            </svg>
-                            <span class="text-[14px]">No image selected</span>
-                        </div>
-                    </div>
-                    <input id="imageInput" type="file" accept="image/*"
-                        class="rounded-[5px] px-[15px] py-[8px] text-[14px] font-normal border-[1px] border-gray-300 focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-[5px] file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer">
-                </div>
-            </div>
-
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Title</label>
-                <input placeholder="Ex: Cakes" value="Cakes"
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    type="text">
-            </div>
-
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Description</label>
-                <textarea placeholder="Ex: Delicious homemade cakes for all occasions"
-                    class="rounded-[5px] resize-none min-h-[100px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    name="" id="">Delicious homemade cakes for all occasions</textarea>
-            </div>
-
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Number of Products</label>
-                <input placeholder="0" value="24" readonly
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 bg-gray-50 focus:outline-none"
-                    type="number">
-                <span class="text-[12px] text-gray-500">This is automatically calculated based on products in this
-                    category</span>
-            </div>
-
-            <div class="flex flex-col gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Status</label>
-                <div class="flex items-center gap-[20px]">
-                    <div class="flex items-center gap-[10px]">
-                        <input type="radio" name="status" class="cursor-pointer scale-150" checked>
-                        <label class="text-[16px]" for="">Active</label>
-                    </div>
-                    <div class="flex items-center gap-[10px]">
-                        <input type="radio" name="status" class="cursor-pointer scale-150">
-                        <label class="text-[16px]" for="">Hidden</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex w-full flex-col gap-[15px]">
-                <button
-                    class="w-full bg-blue-500 cursor-pointer hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
-                    Save Changes
-                </button>
-                <div id="cancelEditBtn"
-                    class="w-full cursor-pointer text-center text-gray-600 bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
-                    Cancel
-                </div>
-            </div>
-        </form>
-    </div>
-    <!-- ADD MODAL -->
-    <div id="addModal"
-        class="fixed h-[100vh] overflow-y-auto hidden items-start p-[100px] justify-center z-999 w-full ">
-        <form
-            class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
-            <div class="border-b-[1px] border-b-[#E0E0E0] py-[5px] text-[20px] font-semibold text-gray-500">Add new
-                category
-            </div>
-
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Category Image</label>
-                <div class="flex flex-col gap-[10px]">
-                    <div
-                        class="w-full h-[200px] border-2 border-dashed border-gray-300 rounded-[10px] flex items-center justify-center overflow-hidden bg-gray-50">
-                        <img id="imagePreview" src="" alt="Category preview" class="w-full h-full object-cover hidden">
-                        <div id="imagePlaceholder" class="flex flex-col items-center gap-[10px] text-gray-400">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M21 19V5C21 3.9 20.1 3 19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19ZM8.5 13.5L11 16.51L14.5 12L19 18H5L8.5 13.5Z"
-                                    fill="currentColor" />
-                            </svg>
-                            <span class="text-[14px]">No image selected</span>
-                        </div>
-                    </div>
-                    <input id="imageInput" type="file" accept="image/*"
-                        class="rounded-[5px] px-[15px] py-[8px] text-[14px] font-normal border-[1px] border-gray-300 focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-[5px] file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer">
-                </div>
-            </div>
-
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Title</label>
-                <input placeholder="Ex: Cakes" value=""
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    type="text">
-            </div>
-
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Description</label>
-                <textarea placeholder="Ex: Delicious homemade cakes for all occasions"
-                    class="rounded-[5px] resize-none min-h-[100px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    name="" id=""></textarea>
-            </div>
-
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Number of Products</label>
-                <input placeholder="0" value="" readonly
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 bg-gray-50 focus:outline-none"
-                    type="number">
-                <span class="text-[12px] text-gray-500">This is automatically calculated based on products in this
-                    category</span>
-            </div>
-
-            <div class="flex flex-col gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Status</label>
-                <div class="flex items-center gap-[20px]">
-                    <div class="flex items-center gap-[10px]">
-                        <input type="radio" name="status" class="cursor-pointer scale-150" checked>
-                        <label class="text-[16px]" for="">Active</label>
-                    </div>
-                    <div class="flex items-center gap-[10px]">
-                        <input type="radio" name="status" class="cursor-pointer scale-150">
-                        <label class="text-[16px]" for="">Hidden</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex w-full flex-col gap-[15px]">
-                <button
-                    class="w-full bg-blue-500 cursor-pointer hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
-                    Save
-                </button>
-                <div id="cancelAddBtn"
                     class="w-full cursor-pointer text-center text-gray-600 bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
                     Cancel
                 </div>
@@ -222,7 +66,8 @@
             <div class="flex flex-col gap-[15px]">
                 <div class="flex items-center gap-[15px] justify-between ">
                     <div class="text-[16px] text-gray-400 font-medium">Description:</div>
-                    <div class="text-[16px] text-gray-700 font-medium text-end">Delicious homemade cakes <br>for all occasions</div>
+                    <div class="text-[16px] text-gray-700 font-medium text-end">Delicious homemade cakes <br>for all
+                        occasions</div>
                 </div>
                 <div class="flex items-center gap-[15px] justify-between ">
                     <div class="text-[16px] text-gray-400 font-medium">Date Created:</div>
@@ -356,49 +201,6 @@
                                 fill="black" />
                         </svg>
                         Menu
-                    </div>
-                </div>
-
-                <div class="group w-full hover:opacity-[0.5] transtion-all duration-300 flex items-center gap-[30px]">
-                    <div class="w-[5px] h-[53px] bg-white rounded-br-[20px] rounded-tr-[20px]"></div>
-                    <div
-                        class="rounded-[6px] w-full max-w-[172px] transition-all duration-300 cursor-pointer group-hover:bg-white flex bg-white text-[16px] font-medium text-black items-center gap-[15px] px-[20px] py-[15px]">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_1_710)">
-                                <path
-                                    d="M15.8333 0.833191H4.16667C3.062 0.834514 2.00296 1.27393 1.22185 2.05504C0.440735 2.83616 0.00132321 3.89519 0 4.99986L0 14.9999C0.00132321 16.1045 0.440735 17.1636 1.22185 17.9447C2.00296 18.7258 3.062 19.1652 4.16667 19.1665H15.8333C16.938 19.1652 17.997 18.7258 18.7782 17.9447C19.5593 17.1636 19.9987 16.1045 20 14.9999V4.99986C19.9987 3.89519 19.5593 2.83616 18.7782 2.05504C17.997 1.27393 16.938 0.834514 15.8333 0.833191ZM4.16667 2.49986H15.8333C16.3323 2.50084 16.8196 2.65112 17.2325 2.93136C17.6453 3.2116 17.9649 3.60898 18.15 4.07236L11.7683 10.4549C11.2987 10.9226 10.6628 11.1852 10 11.1852C9.33715 11.1852 8.70131 10.9226 8.23167 10.4549L1.85 4.07236C2.03512 3.60898 2.35468 3.2116 2.76754 2.93136C3.1804 2.65112 3.66768 2.50084 4.16667 2.49986ZM15.8333 17.4999H4.16667C3.50363 17.4999 2.86774 17.2365 2.3989 16.7676C1.93006 16.2988 1.66667 15.6629 1.66667 14.9999V6.24986L7.05333 11.6332C7.83552 12.4134 8.89521 12.8516 10 12.8516C11.1048 12.8516 12.1645 12.4134 12.9467 11.6332L18.3333 6.24986V14.9999C18.3333 15.6629 18.0699 16.2988 17.6011 16.7676C17.1323 17.2365 16.4964 17.4999 15.8333 17.4999Z"
-                                    fill="black" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_1_710">
-                                    <rect width="20" height="20" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        Inbox
-                    </div>
-                </div>
-
-                <div class="group w-full hover:opacity-[0.5] transtion-all duration-300 flex items-center gap-[30px]">
-                    <div class="w-[5px] h-[53px] bg-white rounded-br-[20px] rounded-tr-[20px]"></div>
-                    <div
-                        class="rounded-[6px] w-full max-w-[172px] transition-all duration-300 cursor-pointer group-hover:bg-white flex bg-white text-[16px] font-medium text-black items-center gap-[15px] px-[20px] py-[15px]">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_1_780)">
-                                <path
-                                    d="M15.8333 0H4.16667C3.062 0.00132321 2.00296 0.440735 1.22185 1.22185C0.440735 2.00296 0.00132321 3.062 0 4.16667L0 15.8333C0.00132321 16.938 0.440735 17.997 1.22185 18.7782C2.00296 19.5593 3.062 19.9987 4.16667 20H15.8333C16.938 19.9987 17.997 19.5593 18.7782 18.7782C19.5593 17.997 19.9987 16.938 20 15.8333V4.16667C19.9987 3.062 19.5593 2.00296 18.7782 1.22185C17.997 0.440735 16.938 0.00132321 15.8333 0V0ZM4.16667 1.66667H15.8333C16.4964 1.66667 17.1323 1.93006 17.6011 2.3989C18.0699 2.86774 18.3333 3.50363 18.3333 4.16667V15.8333C18.3319 16.2046 18.2464 16.5707 18.0833 16.9042L10.4475 9.26833C10.0606 8.88131 9.6012 8.57429 9.0956 8.36483C8.59001 8.15537 8.0481 8.04756 7.50083 8.04756C6.95357 8.04756 6.41166 8.15537 5.90606 8.36483C5.40047 8.57429 4.94109 8.88131 4.55417 9.26833L1.66667 12.155V4.16667C1.66667 3.50363 1.93006 2.86774 2.3989 2.3989C2.86774 1.93006 3.50363 1.66667 4.16667 1.66667ZM4.16667 18.3333C3.50363 18.3333 2.86774 18.0699 2.3989 17.6011C1.93006 17.1323 1.66667 16.4964 1.66667 15.8333V14.5117L5.73167 10.4467C5.96383 10.2144 6.2395 10.0301 6.54292 9.90432C6.84634 9.77858 7.17156 9.71387 7.5 9.71387C7.82844 9.71387 8.15366 9.77858 8.45708 9.90432C8.7605 10.0301 9.03617 10.2144 9.26833 10.4467L16.9042 18.0833C16.5707 18.2464 16.2046 18.3319 15.8333 18.3333H4.16667Z"
-                                    fill="#374957" />
-                                <path
-                                    d="M13.3334 8.74972C13.9103 8.74972 14.4742 8.57866 14.9538 8.25817C15.4335 7.93768 15.8073 7.48216 16.0281 6.94921C16.2488 6.41626 16.3066 5.82981 16.194 5.26404C16.0815 4.69826 15.8037 4.17856 15.3958 3.77066C14.9879 3.36275 14.4682 3.08497 13.9024 2.97243C13.3366 2.85989 12.7502 2.91765 12.2173 3.1384C11.6843 3.35916 11.2288 3.73299 10.9083 4.21264C10.5878 4.69228 10.4167 5.25619 10.4167 5.83305C10.4167 6.6066 10.724 7.34846 11.271 7.89544C11.818 8.44243 12.5599 8.74972 13.3334 8.74972ZM13.3334 4.58305C13.5806 4.58305 13.8223 4.65636 14.0279 4.79371C14.2334 4.93106 14.3937 5.12629 14.4883 5.3547C14.5829 5.5831 14.6076 5.83444 14.5594 6.07691C14.5112 6.31939 14.3921 6.54212 14.2173 6.71693C14.0425 6.89175 13.8198 7.0108 13.5773 7.05903C13.3348 7.10726 13.0835 7.08251 12.8551 6.9879C12.6267 6.89329 12.4314 6.73307 12.2941 6.52751C12.1567 6.32195 12.0834 6.08028 12.0834 5.83305C12.0834 5.50153 12.2151 5.18359 12.4495 4.94917C12.684 4.71475 13.0019 4.58305 13.3334 4.58305Z"
-                                    fill="#374957" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_1_780">
-                                    <rect width="20" height="20" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        Gallery
                     </div>
                 </div>
 
@@ -575,7 +377,7 @@
                             </div>
                         </form>
 
-                        <div id="addBtn"
+                        <a href="addCategory.html"
                             class="flex bg-white transition-all duration-300 hover:bg-gray-50 cursor-pointer rounded-[10px] border-[1px] border-gray-300 items-center gap-[10px] group cursor-pointer text-[14px] text-black font-medium w-fit px-[30px] py-[25px]">
                             <svg class="w-[20px] h-[20px] stroke-black" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -584,8 +386,8 @@
                                     stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
 
-                            Add new order
-                        </div>
+                            Add new category
+                        </a>
                     </div>
 
                 </div>
@@ -638,80 +440,10 @@
                                 </td>
                                 <td
                                     class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
-                                    <div id="editBtn"
+                                    <a href="editCategory.html"
                                         class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
                                         Edit
-                                    </div>
-                                    <div id="deleteBtn"
-                                        class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Delete
-                                    </div>
-                                    <div id="viewBtn"
-                                        class="text-[#155dfc] hover:bg-[rgba(21,93,252,.3)] transition-all duration-300 cursor-pointer bg-[rgba(21,93,252,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        View
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Cupcakes
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Sweet and colorful cupcakes with various flavors
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    10.15.2025
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    18
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    <div
-                                        class="text-[#6C757D] bg-[rgba(108,117,125,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Hidden
-                                    </div>
-                                </td>
-                                <td
-                                    class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
-                                    <div id="editBtn"
-                                        class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Edit
-                                    </div>
-                                    <div id="deleteBtn"
-                                        class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Delete
-                                    </div>
-                                    <div id="viewBtn"
-                                        class="text-[#155dfc] hover:bg-[rgba(21,93,252,.3)] transition-all duration-300 cursor-pointer bg-[rgba(21,93,252,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        View
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Pastries
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Fresh baked pastries and bread daily
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    11.05.2025
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    32
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    <div
-                                        class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Active
-                                    </div>
-                                </td>
-                                <td
-                                    class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
-                                    <div id="editBtn"
-                                        class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Edit
-                                    </div>
+                                    </a>
                                     <div id="deleteBtn"
                                         class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
                                         Delete
@@ -729,72 +461,17 @@
         </section>
 
     </main>
-    <!-- CHARTSJS JS -->
-    <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-
-        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, 'rgba(67, 121, 238, 0.5)');
-        gradient.addColorStop(1, 'rgba(67, 121, 238, 0)');
-
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [150, 190, 300, 190, 275, 150, 285, 290, 350, 300, 450, 560],
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    backgroundColor: gradient,
-                    borderWidth: 2,
-                    fill: true,
-                    tension: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        });
-    </script>
     <!-- CUSTOM JS -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const editButton = document.getElementById("editBtn");
-            const cancelEditButton = document.getElementById("cancelEditBtn");
-            const editModal = document.getElementById("editModal");
             // delete fuction
             const deleteButton = document.getElementById("deleteBtn");
             const cancelDeleteButton = document.getElementById("cancelDeleteBtn");
             const deleteModal = document.getElementById("deleteModal");
-            // add function
-            const addButton = document.getElementById("addBtn");
-            const cancelAddButton = document.getElementById("cancelAddBtn");
-            const addModal = document.getElementById("addModal")
             // view function
             const viewButton = document.getElementById("viewBtn");
             const cancelViewButton = document.getElementById("cancelViewBtn");
             const viewModal = document.getElementById("viewModal")
-
-            editButton.addEventListener("click", function () {
-                editModal.classList.remove("hidden");
-                editModal.classList.add("flex");
-            })
-
-            cancelEditButton.addEventListener("click", function () {
-                editModal.classList.add("hidden");
-                editModal.classList.remove("flex");
-            })
 
             // delete block
             deleteButton.addEventListener("click", function () {
@@ -806,16 +483,6 @@
                 deleteModal.classList.remove("flex");
                 deleteModal.classList.add("hidden");
 
-            })
-
-            // add block
-            addButton.addEventListener("click", function () {
-                addModal.classList.remove("hidden");
-                addModal.classList.add("flex");
-            })
-            cancelAddButton.addEventListener("click", function () {
-                addModal.classList.remove("flex");
-                addModal.classList.add("hidden");
             })
 
             // view block
