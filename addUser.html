@@ -52,7 +52,7 @@
                     </div>
                 </div>
 
-                <div class="group flex items-center gap-[30px]">
+                <div class="group hover:opacity-[0.5] transtion-all duration-300 w-full flex items-center gap-[30px]">
                     <div class="w-[5px] h-[53px] bg-white rounded-br-[20px] rounded-tr-[20px]"></div>
                     <div
                         class="rounded-[6px] max-w-[172px] w-full transition-all duration-300 cursor-pointer group-hover:bg-white flex bg-white text-[16px] font-medium text-black items-center gap-[15px] px-[20px] py-[15px]">
@@ -350,6 +350,7 @@
                                 type="tel">
                         </div>
 
+
                         <div class="flex flex-col w-full gap-[5px]">
                             <label class="text-[14px] text-gray-600 font-semibold">Password</label>
                             <div class="relative">
@@ -357,7 +358,7 @@
                                     class="rounded-[5px] w-full px-[15px] py-[8px] pr-[45px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
                                     type="password">
                                 <svg onclick="togglePassword('password', this)"
-                                    class="absolute right-[15px] top-[50%] translate-y-[-50%] w-5 h-5 text-gray-500 cursor-pointer hover:text-gray-700"
+                                    class="absolute right-[15px] top-[50%] translate-y-[-50%] w-5 h-5 text-gray-500 cursor-pointer hover:text-gray-700 transition-all"
                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path class="eye-open" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -395,7 +396,6 @@
                                 </svg>
                             </div>
                         </div>
-
                         <div class="flex flex-col w-full gap-[5px]">
                             <label class="text-[14px] text-gray-600 font-semibold">Address</label>
                             <textarea placeholder="Ex: 1234 Street, City, Country"
@@ -433,16 +433,19 @@
 
     </main>
     <script>
-         function togglePassword(inputId, icon) {
+        function togglePassword(inputId, icon) {
             const input = document.getElementById(inputId);
+            const eyeOpen = icon.querySelectorAll('.eye-open');
+            const eyeClosed = icon.querySelectorAll('.eye-closed');
+
             if (input.type === 'password') {
                 input.type = 'text';
-                icon.classList.remove('fa-eye');
-                icon.classList.add('fa-eye-slash');
+                eyeOpen.forEach(path => path.classList.add('hidden'));
+                eyeClosed.forEach(path => path.classList.remove('hidden'));
             } else {
                 input.type = 'password';
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
+                eyeOpen.forEach(path => path.classList.remove('hidden'));
+                eyeClosed.forEach(path => path.classList.add('hidden'));
             }
         }
     </script>
