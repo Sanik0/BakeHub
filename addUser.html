@@ -18,206 +18,6 @@
 </head>
 
 <body class="bg-[#F5F6FA] relative font-poppins ">
-    <!-- DELETE CONTAINER -->
-    <div id="deleteModal" class="absolute h-[100vh] hidden items-start p-[100px] justify-center z-999 w-full ">
-        <!-- DELETE MODAL -->
-        <form class="bg-white shadow-lg px-[45px] flex flex-col gap-[30px] py-[30px] rounded-[20px]">
-            <div class="flex flex-col items-center gap-[10px]">
-                <div class="rounded-[50%] h-[65px] w-[65px] flex items-center justify-center bg-[rgba(255,56,60,.2)]">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M15.0005 11.2501V16.2501M5.47412 18.9998C4.33733 20.9688 3.7691 21.9537 3.85401 22.7615C3.92807 23.4662 4.29789 24.1063 4.87109 24.5228C5.52803 25.0001 6.66412 25.0001 8.93616 25.0001H21.0648C23.3369 25.0001 24.4728 25.0001 25.1297 24.5228C25.7029 24.1063 26.0729 23.4662 26.147 22.7615C26.2319 21.9537 25.6638 20.9688 24.527 18.9998L18.4648 8.49983C17.3281 6.53085 16.7594 5.54653 16.0173 5.21614C15.3701 4.92795 14.6305 4.92795 13.9832 5.21614C13.2415 5.54639 12.6732 6.53072 11.5373 8.49806L5.47412 18.9998ZM15.064 20.0001V20.1251L14.9382 20.1253V20.0001H15.064Z"
-                            stroke="#FF383C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-                <h3 class="text-[20px] font-semibold">Are you sure?</h3>
-                <p class="text-[16px] text-gray-500 font-medium max-w-[357px] text-center">This will delete <span
-                        class="text-[#FF383C]">‘Juan Santos’</span> data. And this action cannot be undone.</p>
-            </div>
-            <div class="flex w-full flex-col gap-[15px]">
-                <button
-                    class="w-full bg-[#FF383C] cursor-pointer hover:bg-[#e03235] transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
-                    Yes, Delete User
-                </button>
-                <div id="cancelDeleteBtn"
-                    class="w-full cursor-pointer text-center text-gray-600 bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
-                    Cancel
-                </div>
-            </div>
-        </form>
-    </div>
-    <!-- EDIT MODAL -->
-    <div id="editModal" class="fixed h-[100vh] overflow-y-auto hidden items-start p-[100px] justify-center z-999 w-full ">
-        <form
-            class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
-            <div class="border-b-[1px] border-b-[#] py-[5px] text-[20px] font-semibold text-gray-500">Edit user
-                informations</div>
-            <div class="flex items-center gap-[20px]">
-                <div class="flex flex-col w-full gap-[5px]">
-                    <label class="text-[14px] text-gray-600 font-semibold" for="">Firstname</label>
-                    <input placeholder="Ex: Juan" value="Juan"
-                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                        type="text">
-                </div>
-                <div class="flex flex-col w-full gap-[5px]">
-                    <label class="text-[14px] text-gray-600 font-semibold" for="">Firstname</label>
-                    <input placeholder="Ex: Santos" value="Santos"
-                        class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                        type="text">
-                </div>
-            </div>
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Email</label>
-                <input placeholder="Ex: juansantos@gmail.com" value="juansantos@gmail.com"
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    type="email">
-            </div>
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Contact</label>
-                <input placeholder="Ex: 0986512321" value="0986512321"
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    type="tel">
-            </div>
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Password</label>
-                <input placeholder=""
-                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    type="password">
-            </div>
-             <div class="flex flex-col w-full gap-[5px] relative">
-                <label class="text-[14px] text-gray-600 font-semibold">Confirm Password</label>
-                <div class="relative">
-                     <input placeholder="Ex: 0986512321" value="0986512321"
-                    class="rounded-[5px] w-full px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    type="tel">
-                    <span class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" onclick="togglePassword('confirmPasswordField','eye2')">
-                        <svg id="eye2" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                    </span>
-                </div>
-            </div>
-            <div class="flex flex-col w-full gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Address</label>
-                <textarea placeholder="Ex: 1234 Street, City, Country"
-                    class="rounded-[5px] resize-none min-h-[100px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
-                    name="" id="">1234 Mabini Street, Quezon City, Philippines</textarea>
-            </div>
-            <div class="flex flex-col gap-[5px]">
-                <label class="text-[14px] text-gray-600 font-semibold" for="">Role</label>
-                <div class="flex items-center gap-[20px]">
-                    <div class="flex items-center gap-[10px]">
-                        <input type="radio" name="role" class="cursor-pointer  scale-150" checked>
-                        <label class="text-[16px]" for="">Customer</label>
-                    </div>
-                    <div class="flex items-center gap-[10px]">
-                        <input type="radio" name="role" class="cursor-pointer  scale-150">
-                        <label class="text-[16px]" for="">Admin</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex w-full flex-col gap-[15px]">
-                <button
-                    class="w-full bg-blue-500 cursor-pointer hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
-                    Save Changes
-                </button>
-                <div id="cancelEditBtn"
-                    class="w-full cursor-pointer text-center text-gray-600 bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
-                    Cancel
-                </div>
-            </div>
-        </form>
-    </div>
-    <!-- ADD MODAL -->
-    <div id="viewModal" class="fixed h-[100vh] overflow-y-auto hidden items-start p-[100px] justify-center z-999 w-full ">
-        <div
-            class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[30px] py-[30px] rounded-[20px]">
-            <div class="flex items-center gap-[10px]">
-                <div class="w-[75px] h-[75px] rounded-[50%] overflow-hidden min-w-[75px]">
-                    <img class="w-full h-full object-center object-cover" src="assets/cute pfp cat.jpg" alt="">
-                </div>
-                <div class="flex flex-col gap-[5px]">
-                    <h1 class="font-medium text-[20px]">Juan Santos</h1>
-                    <p class="text-gray-500 font-medium">juansantos@gmail.com</p>
-                </div>
-            </div>
-            <div class="flex flex-col gap-[10px]">
-                <div class="flex items-center gap-[15px] text-[16px] text-gray-700 font-medium">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z"
-                            stroke="#595959" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    0912345678
-                </div>
-                <div class="flex items-center gap-[15px] text-[16px] text-gray-700 font-medium">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M5 9.92285C5 14.7747 9.24448 18.7869 11.1232 20.3252C11.3921 20.5454 11.5281 20.6568 11.7287 20.7132C11.8849 20.7572 12.1148 20.7572 12.271 20.7132C12.472 20.6567 12.6071 20.5463 12.877 20.3254C14.7557 18.7871 18.9999 14.7751 18.9999 9.9233C18.9999 8.08718 18.2625 6.32605 16.9497 5.02772C15.637 3.72939 13.8566 3 12.0001 3C10.1436 3 8.36301 3.7295 7.05025 5.02783C5.7375 6.32616 5 8.08674 5 9.92285Z"
-                            stroke="#595959" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M10 9C10 10.1046 10.8954 11 12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9Z"
-                            stroke="#595959" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    123 Mabini, Quezon City, Philippines
-                </div>
-                <div class="flex items-center gap-[15px] text-[16px] text-gray-700 font-medium">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M8 4H7.2002C6.08009 4 5.51962 4 5.0918 4.21799C4.71547 4.40973 4.40973 4.71547 4.21799 5.0918C4 5.51962 4 6.08009 4 7.2002V8M8 4H16M8 4V2M16 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V8M16 4V2M4 8V16.8002C4 17.9203 4 18.4801 4.21799 18.9079C4.40973 19.2842 4.71547 19.5905 5.0918 19.7822C5.5192 20 6.07899 20 7.19691 20H16.8031C17.921 20 18.48 20 18.9074 19.7822C19.2837 19.5905 19.5905 19.2842 19.7822 18.9079C20 18.4805 20 17.9215 20 16.8036V8M4 8H20M16 16H16.002L16.002 16.002L16 16.002V16ZM12 16H12.002L12.002 16.002L12 16.002V16ZM8 16H8.002L8.00195 16.002L8 16.002V16ZM16.002 12V12.002L16 12.002V12H16.002ZM12 12H12.002L12.002 12.002L12 12.002V12ZM8 12H8.002L8.00195 12.002L8 12.002V12Z"
-                            stroke="#595959" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    Januray 15, 2005
-                </div>
-            </div>
-            <div class="flex flex-col gap-[10px]">
-                <h3 class="text-[20px] font-medium">Order History</h3>
-                <table class="w-full">
-                    <thead>
-                        <tr class="bg-[#F1F4F9] px-[10px] py-[15px]">
-                            <th
-                                class="text-[14px] rounded-tl-[10px] px-[10px] py-[15px] font-semibold text-start">
-                                Product</th>
-                            <th class="text-[14px] px-[10px] py-[15px] px-[10px] py-[15px] font-semibold text-start">
-                                Ordered at</th>
-                            <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Piece</th>
-                            <th class="text-[14px] rounded-tr-[10px] px-[10px] py-[15px] font-semibold text-start">Status
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                Cupcakes
-                            </td>
-                            <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                12.09.2025
-                            </td>
-                            <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                980
-                            </td>
-                            <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                <div
-                                    class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                    Delivered
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="flex w-full flex-col gap-[15px]">
-                <div id="cancelViewBtn"
-                    class="w-full bg-blue-500 cursor-pointer text-center hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
-                    Go Back
-            </div>
-            </div>
-        </div>
-    </div>
     <main class="flex relative">
         <!-- SIDEBAR SECTION -->
         <section
@@ -253,10 +53,10 @@
                 </div>
 
                 <div class="group flex items-center gap-[30px]">
-                    <div class="w-[5px] h-[53px] bg-[#FBEDCD] rounded-br-[20px] rounded-tr-[20px]"></div>
+                    <div class="w-[5px] h-[53px] bg-white rounded-br-[20px] rounded-tr-[20px]"></div>
                     <div
-                        class="rounded-[6px] w-full max-w-[172px] transition-all duration-300 cursor-pointer group-hover:bg-[#ffebbd] flex bg-[#FBEDCD] text-[16px] font-medium text-[#896008] items-center gap-[15px] px-[20px] py-[15px]">
-                        <svg class="fill-[#896008]" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        class="rounded-[6px] max-w-[172px] w-full transition-all duration-300 cursor-pointer group-hover:bg-white flex bg-white text-[16px] font-medium text-black items-center gap-[15px] px-[20px] py-[15px]">
+                        <svg class="fill-[black]" width="20" height="20" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1_736)">
                                 <path
@@ -508,170 +308,143 @@
 
             <!-- main info -->
             <div class="w-full flex flex-col gap-[30px] p-[30px]">
-                <!-- FILTER -->
-                <div class="w-full flex flex-col gap-[20px]">
-                    <h1 class="text-[32px] font-semibold">Manage Users</h1>
-                    <!-- FILTER -->
-                    <div class="w-full flex items-center justify-between">
-                        <form class="flex w-fit items-center bg-white border-[1px] rounded-[10px] border-[#E0E0E0]">
-                            <div class="border-r-[#E0E0E0] border-r-[1px] w-fit px-[30px] py-[25px]">
-                                <svg width="21" height="24" viewBox="0 0 21 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10.5 9.75C15.8848 9.75 20.25 7.73528 20.25 5.25C20.25 2.76472 15.8848 0.75 10.5 0.75C5.11522 0.75 0.75 2.76472 0.75 5.25C0.75 7.73528 5.11522 9.75 10.5 9.75Z"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M0.75 5.25C0.75253 9.76548 3.85614 13.688 8.25 14.729V21C8.25 22.2426 9.25736 23.25 10.5 23.25C11.7426 23.25 12.75 22.2426 12.75 21V14.729C17.1439 13.688 20.2475 9.76548 20.25 5.25"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <div
-                                class="border-r-[#E0E0E0] text-[14px] font-medium border-r-[1px] w-fit px-[30px] py-[25px]">
-                                Filter By
-                            </div>
-                            <div
-                                class="border-r-[#E0E0E0] group cursor-pointer text-[14px] font-medium border-r-[1px] w-fit px-[30px] py-[25px]">
-                                <select class="focus:outline-none group-hover:cursor-pointer" name="" id="">
-                                    <option value="">User Type</option>
-                                </select>
-                            </div>
-                            <div
-                                class="flex items-center gap-[10px] group cursor-pointer text-[14px] text-[#EA0234] font-medium w-fit px-[30px] py-[25px]">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.99992 4.16666V0.833328L5.83325 4.99999L9.99992 9.16666V5.83333C12.7583 5.83333 14.9999 8.07499 14.9999 10.8333C14.9999 13.5917 12.7583 15.8333 9.99992 15.8333C7.24159 15.8333 4.99992 13.5917 4.99992 10.8333H3.33325C3.33325 14.5167 6.31659 17.5 9.99992 17.5C13.6833 17.5 16.6666 14.5167 16.6666 10.8333C16.6666 7.14999 13.6833 4.16666 9.99992 4.16666Z"
-                                        fill="#EA0234" />
-                                </svg>
-                                Reset Filter
-                            </div>
-                        </form>
+                <div id="addModal" class="flex items-start justify-center w-full items-center">
+                    <div
+                        class="bg-white w-full max-w-[700px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]">
+                        <div class="border-b-[1px] border-b-gray-300 py-[5px] text-[20px] font-semibold text-gray-500">
+                            Add new user</div>
 
-                        <a href="addUser.html" 
-                            class="flex bg-white transition-all duration-300 hover:bg-gray-50 cursor-pointer rounded-[10px] border-[1px] border-gray-300 items-center gap-[10px] group cursor-pointer text-[14px] text-black font-medium w-fit px-[30px] py-[25px]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15 19C15 16.7909 12.3137 15 9 15C5.68629 15 3 16.7909 3 19M19 16V13M19 13V10M19 13H16M19 13H22M9 12C6.79086 12 5 10.2091 5 8C5 5.79086 6.79086 4 9 4C11.2091 4 13 5.79086 13 8C13 10.2091 11.2091 12 9 12Z"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Add new user
-                        </a>
+                        <!-- Photo Upload -->
+                        <div class="flex flex-col w-full gap-[5px]">
+                            <label class="text-[14px] text-gray-600 font-semibold">Photo</label>
+                            <input type="file" accept="image/*" id="photoInput"
+                                class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer">
+                        </div>
+
+                        <div class="flex items-center gap-[20px]">
+                            <div class="flex flex-col w-full gap-[5px]">
+                                <label class="text-[14px] text-gray-600 font-semibold">Firstname</label>
+                                <input placeholder="Ex: Juan"
+                                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                                    type="text">
+                            </div>
+                            <div class="flex flex-col w-full gap-[5px]">
+                                <label class="text-[14px] text-gray-600 font-semibold">Lastname</label>
+                                <input placeholder="Ex: Santos"
+                                    class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                                    type="text">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col w-full gap-[5px]">
+                            <label class="text-[14px] text-gray-600 font-semibold">Email</label>
+                            <input placeholder="Ex: juansantos@gmail.com"
+                                class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                                type="email">
+                        </div>
+
+                        <div class="flex flex-col w-full gap-[5px]">
+                            <label class="text-[14px] text-gray-600 font-semibold">Contact</label>
+                            <input placeholder="Ex: 0986512321"
+                                class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                                type="tel">
+                        </div>
+
+                        <div class="flex flex-col w-full gap-[5px]">
+                            <label class="text-[14px] text-gray-600 font-semibold">Password</label>
+                            <div class="relative">
+                                <input id="password" placeholder=""
+                                    class="rounded-[5px] w-full px-[15px] py-[8px] pr-[45px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                                    type="password">
+                                <svg onclick="togglePassword('password', this)"
+                                    class="absolute right-[15px] top-[50%] translate-y-[-50%] w-5 h-5 text-gray-500 cursor-pointer hover:text-gray-700"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path class="eye-open" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path class="eye-open" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
+                                    <path class="eye-closed hidden" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col w-full gap-[5px]">
+                            <label class="text-[14px] text-gray-600 font-semibold">Confirm Password</label>
+                            <div class="relative">
+                                <input id="confirmPassword" placeholder=""
+                                    class="rounded-[5px] w-full px-[15px] py-[8px] pr-[45px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                                    type="password">
+                                <svg onclick="togglePassword('confirmPassword', this)"
+                                    class="absolute right-[15px] top-[50%] translate-y-[-50%] w-5 h-5 text-gray-500 cursor-pointer hover:text-gray-700"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path class="eye-open" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path class="eye-open" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
+                                    <path class="eye-closed hidden" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col w-full gap-[5px]">
+                            <label class="text-[14px] text-gray-600 font-semibold">Address</label>
+                            <textarea placeholder="Ex: 1234 Street, City, Country"
+                                class="rounded-[5px] resize-none min-h-[100px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"></textarea>
+                        </div>
+
+                        <div class="flex flex-col gap-[5px]">
+                            <label class="text-[14px] text-gray-600 font-semibold">Role</label>
+                            <div class="flex items-center gap-[20px]">
+                                <div class="flex items-center gap-[10px]">
+                                    <input type="radio" name="role" class="cursor-pointer scale-150" checked>
+                                    <label class="text-[16px]">Customer</label>
+                                </div>
+                                <div class="flex items-center gap-[10px]">
+                                    <input type="radio" name="role" class="cursor-pointer scale-150">
+                                    <label class="text-[16px]">Admin</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex w-full flex-col gap-[15px]">
+                            <button
+                                class="w-full bg-blue-500 cursor-pointer hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
+                                Save
+                            </button>
+                            <div id="cancelAddBtn"
+                                class="w-full cursor-pointer text-center text-gray-600 bg-white hover:bg-gray-100 transition-all duration-300 text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
+                                Cancel
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-                <!-- TABLE -->
-                <div class="w-full p-[30px] rounded-[20px] gap-[20px] bg-white flex flex-col">
-                    <table class="w-full">
-                        <thead>
-                            <tr class="bg-[#F1F4F9] px-[10px] py-[15px]">
-                                <th
-                                    class="text-[14px] rounded-tl-[10px] rounded-bl-[10px] px-[10px] py-[15px] font-semibold text-start">
-                                    Firstname</th>
-                                <th
-                                    class="text-[14px] px-[10px] py-[15px] px-[10px] py-[15px] font-semibold text-start">
-                                    Lastname</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Email</th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Date created
-                                </th>
-                                <th class="text-[14px] px-[10px] py-[15px] font-semibold text-start">Type</th>
-                                <th
-                                    class="text-[14px] rounded-tr-[10px] rounded-br-[10px] px-[10px] py-[15px] font-semibold text-start">
-                                    Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Juan
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    Santos</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    juansantos@gmail.com</td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    12.09.2025
-                                </td>
-                                <td class="text-[14px] px-[10px] py-[15px] font-medium text-gray-700 text-start">
-                                    <div
-                                        class="text-[#00B69B] bg-[rgba(0,182,155,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Customer
-                                    </div>
-                                </td>
-                                <td
-                                    class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
-                                    <div id="editBtn"
-                                        class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Edit
-                                    </div>
-                                    <div id="deleteBtn"
-                                        class="text-[#FF383C] hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        Delete
-                                    </div>
-                                    <div id="viewBtn"
-                                        class="text-[#155dfc] hover:bg-[rgba(21,93,252,.3)] transition-all duration-300 cursor-pointer bg-[rgba(21,93,252,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
-                                        View
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
                 </div>
             </div>
         </section>
 
     </main>
-    <!-- CUSTOM JS -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const editButton = document.getElementById("editBtn");
-            const cancelEditButton = document.getElementById("cancelEditBtn");
-            const editModal = document.getElementById("editModal");
-            // delete fuction
-            const deleteButton = document.getElementById("deleteBtn");
-            const cancelDeleteButton = document.getElementById("cancelDeleteBtn");
-            const deleteModal = document.getElementById("deleteModal");
-            // view function
-            const viewButton = document.getElementById("viewBtn");
-            const cancelViewButton = document.getElementById("cancelViewBtn");
-            const viewModal = document.getElementById("viewModal")
-
-            editButton.addEventListener("click", function () {
-                editModal.classList.remove("hidden");
-                editModal.classList.add("flex");
-            })
-
-            cancelEditButton.addEventListener("click", function () {
-                editModal.classList.add("hidden");
-                editModal.classList.remove("flex");
-            })
-
-            // delete block
-            deleteButton.addEventListener("click", function () {
-                deleteModal.classList.remove("hidden");
-                deleteModal.classList.add("flex");
-
-            })
-            cancelDeleteButton.addEventListener("click", function () {
-                deleteModal.classList.remove("flex");
-                deleteModal.classList.add("hidden");
-
-            })
-            // view block
-            viewButton.addEventListener("click", function () {
-                viewModal.classList.remove("hidden");
-                viewModal.classList.add("flex");
-            })
-            cancelViewButton.addEventListener("click", function () {
-                viewModal.classList.remove("flex");
-                viewModal.classList.add("hidden");
-            })
-
-
-        })
+         function togglePassword(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
     </script>
 </body>
 
