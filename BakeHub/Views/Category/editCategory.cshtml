@@ -1,0 +1,156 @@
+﻿@model BakeHub.Models.Category
+@{
+    ViewBag.Title = "Edit Category";
+}
+
+<!-- MAIN CONTENT SECTION -->
+<section class="w-full pl-[240px]">
+    <!-- HEADER -->
+    <div class="w-full border-b-[#E0E0E0] border-b-[1px] justify-between items-center flex bg-white px-[28px] py-[7px]">
+        <form class="flex gap-[30px] items-center">
+            <div class="p-[10px] flex items-center justify-center rounded-[50%] hover:bg-gray-200 cursor-pointer transition-all duration-300 ">
+                <svg width="30" height="30" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.25 7.75001H28.75C29.0815 7.75001 29.3995 7.61393 29.6339 7.37169C29.8683 7.12946 30 6.80092 30 6.45835C30 6.11578 29.8683 5.78724 29.6339 5.54501C29.3995 5.30277 29.0815 5.16669 28.75 5.16669H1.25C0.918479 5.16669 0.600537 5.30277 0.366117 5.54501C0.131696 5.78724 0 6.11578 0 6.45835C0 6.80092 0.131696 7.12946 0.366117 7.37169C0.600537 7.61393 0.918479 7.75001 1.25 7.75001Z"
+                          fill="#8A8A8A" />
+                    <path d="M28.75 11.625H1.25C0.918479 11.625 0.600537 11.7611 0.366117 12.0033C0.131696 12.2456 0 12.5741 0 12.9167C0 13.2592 0.131696 13.5878 0.366117 13.83C0.600537 14.0722 0.918479 14.2083 1.25 14.2083H28.75C29.0815 14.2083 29.3995 14.0722 29.6339 13.83C29.8683 13.5878 30 13.2592 30 12.9167C30 12.5741 29.8683 12.2456 29.6339 12.0033C29.3995 11.7611 29.0815 11.625 28.75 11.625Z"
+                          fill="#8A8A8A" />
+                    <path d="M28.75 24.5416H1.25C0.918479 24.5416 0.600537 24.6777 0.366117 24.92C0.131696 25.1622 0 25.4907 0 25.8333C0 26.1759 0.131696 26.5044 0.366117 26.7467C0.600537 26.9889 0.918479 27.125 1.25 27.125H28.75C29.0815 27.125 29.3995 26.9889 29.6339 26.7467C29.8683 26.5044 30 26.1759 30 25.8333C30 25.4907 29.8683 25.1622 29.6339 24.92C29.3995 24.6777 29.0815 24.5416 28.75 24.5416Z"
+                          fill="#8A8A8A" />
+                    <path d="M28.75 18.0834H1.25C0.918479 18.0834 0.600537 18.2195 0.366117 18.4617C0.131696 18.7039 0 19.0325 0 19.375C0 19.7176 0.131696 20.0462 0.366117 20.2884C0.600537 20.5306 0.918479 20.6667 1.25 20.6667H28.75C29.0815 20.6667 29.3995 20.5306 29.6339 20.2884C29.8683 20.0462 30 19.7176 30 19.375C30 19.0325 29.8683 18.7039 29.6339 18.4617C29.3995 18.2195 29.0815 18.0834 28.75 18.0834Z"
+                          fill="#8A8A8A" />
+                </svg>
+            </div>
+            <div class="rounded-[25px] w-full max-w-[333px] border-[#E0E0E0] border-[1px] px-[15px] py-[10px] flex items-center gap-[15px]">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_11_127)">
+                        <path d="M19.7557 18.5781L14.7815 13.6039C16.137 11.9461 16.8035 9.83067 16.643 7.69523C16.4826 5.55978 15.5075 3.5677 13.9195 2.13102C12.3315 0.69435 10.252 -0.076999 8.11119 -0.0234725C5.9704 0.030054 3.93207 0.90436 2.41783 2.4186C0.903588 3.93284 0.0292815 5.97117 -0.024245 8.11196C-0.0777715 10.2528 0.693577 12.3322 2.13025 13.9202C3.56693 15.5083 5.55901 16.4834 7.69445 16.6438C9.8299 16.8042 11.9453 16.1378 13.6032 14.7823L18.5773 19.7564C18.7345 19.9082 18.945 19.9922 19.1635 19.9903C19.382 19.9884 19.591 19.9008 19.7455 19.7463C19.9 19.5918 19.9877 19.3828 19.9895 19.1643C19.9914 18.9458 19.9075 18.7353 19.7557 18.5781ZM8.33315 15.0006C7.01461 15.0006 5.72568 14.6096 4.62935 13.8771C3.53302 13.1445 2.67854 12.1033 2.17395 10.8851C1.66937 9.66697 1.53735 8.32653 1.79458 7.03332C2.05182 5.74012 2.68676 4.55223 3.61911 3.61988C4.55146 2.68753 5.73934 2.05259 7.03255 1.79536C8.32576 1.53812 9.6662 1.67014 10.8844 2.17473C12.1025 2.67931 13.1437 3.53379 13.8763 4.63012C14.6088 5.72645 14.9998 7.01538 14.9998 8.33393C14.9978 10.1014 14.2948 11.796 13.045 13.0458C11.7952 14.2956 10.1007 14.9986 8.33315 15.0006Z"
+                              fill="#8A8A8A" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_11_127">
+                            <rect width="20" height="20" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <input type="search" class="focus:outline-none text-[16px]" type="text" placeholder="Search">
+            </div>
+        </form>
+
+        <div class="flex items-center gap-[30px]">
+            <div class="relative rounded-[50%] h-[35px] w-[35px] min-w-[35px] w-fit group cursor-pointer hover:bg-gray-200 transition-all duration-300 flex items-center justify-center">
+                <svg class="h-[24px] w-[24px]" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.7491 9.70957V9.00497C18.7491 5.13623 15.7274 2 12 2C8.27256 2 5.25087 5.13623 5.25087 9.00497V9.70957C5.25087 10.5552 5.00972 11.3818 4.5578 12.0854L3.45036 13.8095C2.43882 15.3843 3.21105 17.5249 4.97036 18.0229C9.57274 19.3257 14.4273 19.3257 19.0296 18.0229C20.789 17.5249 21.5612 15.3843 20.5496 13.8095L19.4422 12.0854C18.9903 11.3818 18.7491 10.5552 18.7491 9.70957Z"
+                          stroke="#1C274C" stroke-width="1.5" />
+                    <path d="M7.5 19C8.15503 20.7478 9.92246 22 12 22C14.0775 22 15.845 20.7478 16.5 19"
+                          stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <div class="h-[15px] absolute top-0 right-0 flex text-[10px] mt-[2px] mr-[2px] text-white items-center justify-center w-[15px] bg-red-600 rounded-[50%]">
+                    8
+                </div>
+            </div>
+
+            <div class="flex gap-[10px] items-center">
+                <div class="overflow-hidden rounded-[50%] h-[50px] w-[50px] min-w-[50px]">
+                    <img class="h-full w-full object-center object-cover" src="assets/cute pfp cat.jpg" alt="">
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="text-[16px] text-gray-600 font-semibold">Juan Ming</h3>
+                    <small class="text-gray-500 text-[12px] font-semibold">Admin</small>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="bubble fixed flex items-center justify-center w-full">
+            <div class="flex w-full max-w-[700px] mt-[30px] items-center justify-center">
+                <div class="flex w-full items-center p-4 mb-4 text-sm text-[#4BB543] rounded-[10px] bg-[#b8ffb3] border border-[#4BB543]"
+                     style="animation: slideDownUp 4s ease-out forwards;">
+                    <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                         fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <span class="font-medium me-1"></span>@Model.ErrorMessage
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- main info -->
+    <div class="w-full flex flex-col gap-[30px] p-[30px]">
+        <div class="flex items-start justify-center w-full items-center">
+            @using (Html.BeginForm("editCategory", "Category", FormMethod.Post, new { enctype = "multipart/form-data", @class = "bg-white w-full max-w-[700px] shadow-lg px-[45px] flex flex-col gap-[20px] py-[30px] rounded-[20px]" }))
+            {
+                <div class="border-b-[1px] border-b-[#E0E0E0] py-[5px] text-[20px] font-semibold text-gray-500">
+                    Edit
+                    Category
+                </div>
+                <input type="hidden" name="Category_id" value="@Model.Category_id" />
+                <input type="hidden" name="ExistingPhoto" value="@Model.ExistingPhoto" />
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold">Photo</label>
+                    <input type="file"
+                           accept="image/*" id="photoInput"
+                           name="Photo"
+                           class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer">
+                </div>
+
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Title</label>
+                    <input placeholder="Ex: Cakes"
+                           name="Title"
+                           required
+                           value="@Model.Title"
+                           class="rounded-[5px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                           type="text">
+                </div>
+
+                <div class="flex flex-col w-full gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Description</label>
+                    <textarea placeholder="Ex: Delicious homemade cakes for all occasions"
+                              required
+                              class="rounded-[5px] resize-none min-h-[100px] px-[15px] py-[8px] text-[16px] font-normal border-[1px] border-gray-300 focus:outline-none"
+                              name="Description" id="">@Model.Description</textarea>
+                </div>
+
+                <div class="flex flex-col gap-[5px]">
+                    <label class="text-[14px] text-gray-600 font-semibold" for="">Status</label>
+                    <div class="flex items-center gap-[20px]">
+                        <div class="flex items-center gap-[10px]">
+                            <input type="radio"
+                                   name="Status"
+                                   value="1"
+                                    @(Model.Status == 1 ? "checked" : "")
+                                   class="cursor-pointer scale-150">
+                            <label class="text-[16px]" for="">Active</label>
+                        </div>
+                        <div class="flex items-center gap-[10px]">
+                            <input type="radio"
+                                   name="Status"
+                                      @(Model.Status == 0 ? "checked" : "")
+                                   value="0"
+                                   class="cursor-pointer scale-150">
+                            <label class="text-[16px]" for="">Hidden</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex w-full flex-col gap-[15px]">
+                    <button type="submit" class="w-full bg-blue-500 cursor-pointer hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
+                        Save
+                    </button>
+                    <a href="@Url.Action("categories", "category")" id="cancelEditBtn"
+                       class="w-full cursor-pointer text-center text-gray-600 bg-white hover:bg-gray-100 transition-all duration-300 text-black text-[16px] font-medium py-[15px] rounded-[6px] border border-gray-300">
+                        Cancel
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
