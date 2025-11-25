@@ -53,6 +53,7 @@ namespace BakeHub.Controllers
                                 Status = reader["status"] == DBNull.Value ? 1 : Convert.ToInt32(reader["status"]),
                                 Created_at = reader["created_at"] == DBNull.Value ? "" : reader["created_at"].ToString(),
                                 Category_id = reader["category_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["category_id"]),
+                                Product_id = reader["product_id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["product_id"]),
                                 ExistingPhoto = reader["image"] == DBNull.Value ? "" : reader["image"].ToString()
                             });
                         }
@@ -136,6 +137,38 @@ namespace BakeHub.Controllers
             TempData["SuccessMessage"] = "Product added successfully!";
             return RedirectToAction("products", "product");
         }
+
+
+        //======================================DELETE PRODUCT====================================
+        [HttpPost]
+        public ActionResult DeleteProduct(int id)
+        {
+            using (var conn = db.Connection)
+            {
+                conn.Open();
+
+                string query = "DELETE FROM products WHERE product_id=@id";
+
+                using (var cmd = new MySqlCommand(query, (MySqlConnection)conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    int rows = cmd.ExecuteNonQuery();
+
+                    if (rows == 0)
+                    {
+                        TempData["SuccessMessage"] = "Product not found.";
+                    }
+                    else
+                    {
+                        TempData["SuccessMessage"] = "Product deleted successfully!";
+                    }
+                }
+            }
+
+            return RedirectToAction("products", "product");
+        }
+
 
 
     }
