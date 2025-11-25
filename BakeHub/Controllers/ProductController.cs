@@ -46,7 +46,9 @@ namespace BakeHub.Controllers
                             productsList.Add(new Product
                             {
                                 Name = reader["name"] == DBNull.Value ? "" : reader["name"].ToString(),
-                                Price = reader["price"] == DBNull.Value ? 1 : Convert.ToInt32(reader["price"]),
+                                Price = reader["price"] == DBNull.Value
+                                ? 1m
+                                : Convert.ToDecimal(reader["price"]),
                                 Stock = reader["stock"] == DBNull.Value ? 1 : Convert.ToInt32(reader["stock"]),
                                 Status = reader["status"] == DBNull.Value ? 1 : Convert.ToInt32(reader["status"]),
                                 Created_at = reader["created_at"] == DBNull.Value ? "" : reader["created_at"].ToString(),
