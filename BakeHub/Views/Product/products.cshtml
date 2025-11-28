@@ -52,6 +52,49 @@
         </div>
     </form>
 </div>
+<!-- VIEW MODAL -->
+<div id="viewModal" class="fixed h-[100vh] overflow-y-auto hidden items-start p-[100px] justify-center z-[999] w-full bg-black bg-opacity-50 top-0 left-0">
+    <div class="bg-white w-full max-w-[582px] shadow-lg px-[45px] flex flex-col gap-[30px] py-[30px] rounded-[20px]">
+        <div class="flex items-center gap-[10px]">
+            <div class="w-[75px] h-[75px] rounded-[50%] overflow-hidden min-w-[75px] bg-gray-200 flex items-center justify-center">
+                <div id="modalImageContainer" class="w-[75px] h-[75px] rounded-[50%] overflow-hidden min-w-[75px] bg-gray-200 flex items-center justify-center">
+                    <img id="modalImage" src="" alt="User" class="w-full h-full object-cover hidden" />
+                    <svg id="modalPlaceholder" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#9CA3AF" stroke-width="2" />
+                        <path d="M20 21C20 17.134 16.4183 14 12 14C7.58172 14 4 17.134 4 21" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="flex flex-col gap-[5px]">
+                <h1 id="modalName" class="font-medium text-[20px]"></h1>
+                <p id="modalStatus" class="text-gray-500 font-medium"></p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-[10px]">
+            <div class="flex items-center gap-[15px] text-[16px] text-gray-700 font-medium">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 4H7.2002C6.08009 4 5.51962 4 5.0918 4.21799C4.71547 4.40973 4.40973 4.71547 4.21799 5.0918C4 5.51962 4 6.08009 4 7.2002V8M8 4H16M8 4V2M16 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V8M16 4V2M4 8V16.8002C4 17.9203 4 18.4801 4.21799 18.9079C4.40973 19.2842 4.71547 19.5905 5.0918 19.7822C5.5192 20 6.07899 20 7.19691 20H16.8031C17.921 20 18.48 20 18.9074 19.7822C19.2837 19.5905 19.5905 19.2842 19.7822 18.9079C20 18.4805 20 17.9215 20 16.8036V8M4 8H20M16 16H16.002L16.002 16.002L16 16.002V16ZM12 16H12.002L12.002 16.002L12 16.002V16ZM8 16H8.002L8.00195 16.002L8 16.002V16ZM16.002 12V12.002L16 12.002V12H16.002ZM12 12H12.002L12.002 12.002L12 12.002V12ZM8 12H8.002L8.00195 12.002L8 12.002V12Z"
+                          stroke="#595959" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span id="modalDate"></span>
+            </div>
+            <div class="flex items-center gap-[15px] text-[16px] text-gray-700 font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#595959"><path d="M856-390 570-104q-12 12-27 18t-30 6q-15 0-30-6t-27-18L103-457q-11-11-17-25.5T80-513v-287q0-33 23.5-56.5T160-880h287q16 0 31 6.5t26 17.5l352 353q12 12 17.5 27t5.5 30q0 15-5.5 29.5T856-390ZM513-160l286-286-353-354H160v286l353 354ZM260-640q25 0 42.5-17.5T320-700q0-25-17.5-42.5T260-760q-25 0-42.5 17.5T200-700q0 25 17.5 42.5T260-640Zm220 160Z" /></svg>
+                <span id="modalPrice"></span>
+            </div>
+            <div class="flex items-center gap-[15px] text-[16px] text-gray-700 font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#595959"><path d="M200-640v440h560v-440H640v255q0 23-19 34.5t-39 1.5l-102-51-102 51q-20 10-39-1.5T320-385v-255H200Zm0 520q-33 0-56.5-23.5T120-200v-499q0-14 4.5-27t13.5-24l50-61q11-14 27.5-21.5T250-840h460q18 0 34.5 7.5T772-811l50 61q9 11 13.5 24t4.5 27v499q0 33-23.5 56.5T760-120H200Zm16-600h528l-34-40H250l-34 40Zm184 80v190l80-40 80 40v-190H400Zm-200 0h560-560Z" /></svg>
+                <span id="modalStock"></span>
+            </div>
+        </div>
+        <div class="flex w-full flex-col gap-[15px]">
+            <div id="cancelViewBtn"
+                 class="w-full bg-blue-500 cursor-pointer text-center hover:bg-blue-600 transition-all duration-300 text-white text-[16px] font-medium py-[15px] rounded-[6px]">
+                Go Back
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- MAIN CONTENT SECTION -->
 <section class="w-full pl-[240px]">
@@ -142,9 +185,9 @@
                         <select name="statusFilter"
                                 onchange="this.form.submit()"
                                 class="focus:outline-none group-hover:cursor-pointer">
-                            <option value="">All Categories</option>
-                            <option value="1" @(ViewBag.CurrentFilter == 1 ? "selected" : "")>Active</option>
-                            <option value="0" @(ViewBag.CurrentFilter == 0 ? "selected" : "")>Hidden</option>
+                            <option value="">All Products</option>
+                            <option value="1" @(ViewBag.CurrentFilter == 1 ? "selected" : "")>Available</option>
+                            <option value="0" @(ViewBag.CurrentFilter == 0 ? "selected" : "")>Unavailable</option>
                         </select>
                     </div>
                     <a href="@Url.Action("products", "product")"
@@ -228,8 +271,13 @@
                                      class="openDeleteBtn text-[#FF383C]  hover:bg-[rgba(255,56,60,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,56,60,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
                                     Delete
                                 </div>
-                                <div id="viewBtn"
-                                     class="text-[#155dfc] hover:bg-[rgba(21,93,252,.3)] transition-all duration-300 cursor-pointer bg-[rgba(21,93,252,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
+                                <div data-name="@product.Name"
+                                     data-price="@product.Price"
+                                     data-date="@product.Created_at"
+                                     data-photo="@product.Photo"
+                                     data-stock="@product.Stock"
+                                     data-status="@(product.Status == 0 ? "Unavavailable" : "Available")"
+                                     class="text-[#155dfc] viewBtn hover:bg-[rgba(21,93,252,.3)] transition-all duration-300 cursor-pointer bg-[rgba(21,93,252,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
                                     View
                                 </div>
                             </td>
@@ -242,6 +290,61 @@
 </section>
 
 <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('viewModal');
+        const cancelBtn = document.getElementById('cancelViewBtn');
+        const viewButtons = document.querySelectorAll('.viewBtn');
+        const modalImage = document.getElementById('modalImage');
+        const modalPlaceholder = document.getElementById('modalPlaceholder');
+
+        // Open modal
+        viewButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const name = this.dataset.name;
+                const price = this.dataset.price;
+                const date = this.dataset.date;
+                const status = this.dataset.status;
+                const stock = this.dataset.stock;
+                const photo = this.dataset.photo; // Get photo path
+
+                // Populate modal with null/empty checks
+                document.getElementById('modalName').textContent = name || 'N/A';
+                document.getElementById('modalPrice').textContent = price || 'N/A';
+                document.getElementById('modalDate').textContent = date || 'N/A';
+                document.getElementById('modalStatus').textContent = status || 'N/A';
+                document.getElementById('modalStock').textContent = stock || 'N/A';
+
+                // Handle image display
+                if (photo && photo.trim() !== '') {
+                    modalImage.src = photo;
+                    modalImage.classList.remove('hidden');
+                    modalPlaceholder.classList.add('hidden');
+                } else {
+                    modalImage.classList.add('hidden');
+                    modalPlaceholder.classList.remove('hidden');
+                }
+
+                // Show modal
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            });
+        });
+
+        // Close modal
+        cancelBtn.addEventListener('click', function () {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        });
+    });
     document.addEventListener("DOMContentLoaded", function () {
 
         const deleteModal = document.getElementById("deleteModal");
