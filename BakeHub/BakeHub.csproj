@@ -237,6 +237,7 @@
     <Content Include="Views\Category\editCategory.cshtml" />
     <Content Include="Views\Product\products.cshtml" />
     <Content Include="Views\Product\addProduct.cshtml" />
+    <Content Include="Views\Product\editProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

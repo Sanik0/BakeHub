@@ -169,6 +169,11 @@ namespace BakeHub.Controllers
             return RedirectToAction("products", "product");
         }
 
+        //======================================EDIT PRODUCT====================================
+        public ActionResult EditProduct(int id)
+        {
+            return View();
+        }
 
 
     }

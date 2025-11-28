@@ -328,8 +328,12 @@ namespace BakeHub.Controllers
 
             return RedirectToAction("Users", "User");
         }
-
         //======================================VIEW USER====================================
+
+        public ActionResult EditUser(int id)
+        {
+            return View();
+        }
     }
 
 }

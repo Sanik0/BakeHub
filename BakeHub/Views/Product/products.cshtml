@@ -262,7 +262,7 @@
                                 </div>
                             </td>
                             <td class="text-[14px] px-[10px] flex items-center gap-[10px] py-[15px] font-medium text-start">
-                                <a href="editProduct.html"
+                                <a href="@Url.Action("editProduct", "Product", new { id = product.Product_id })"
                                    class="text-[#FF8D28] hover:bg-[rgba(255,141,40,.3)] transition-all duration-300 cursor-pointer bg-[rgba(255,141,40,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
                                     Edit
                                 </a>
@@ -274,7 +274,7 @@
                                 <div data-name="@product.Name"
                                      data-price="@product.Price"
                                      data-date="@product.Created_at"
-                                     data-photo="@product.Photo"
+                                     data-photo="@product.ExistingPhoto"
                                      data-stock="@product.Stock"
                                      data-status="@(product.Status == 0 ? "Unavavailable" : "Available")"
                                      class="text-[#155dfc] viewBtn hover:bg-[rgba(21,93,252,.3)] transition-all duration-300 cursor-pointer bg-[rgba(21,93,252,.2)] w-fit px-[15px] py-[8px] rounded-[5px]">
