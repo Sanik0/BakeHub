@@ -170,6 +170,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Data\MySQLContext.cs" />
@@ -240,6 +241,9 @@
     <Content Include="Views\Product\addProduct.cshtml" />
     <Content Include="Views\Product\editProduct.cshtml" />
     <Content Include="Views\Home\index.cshtml" />
+    <Content Include="Views\Order\orders.cshtml" />
+    <Content Include="Views\Order\editOrder.cshtml" />
+    <Content Include="Views\Order\addOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

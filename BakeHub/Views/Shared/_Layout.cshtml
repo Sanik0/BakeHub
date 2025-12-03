@@ -51,10 +51,10 @@
         <section class="w-full fixed flex flex-col gap-[30px] max-w-[240px] h-[100vh] py-[30px] border-l bg-white border-[1px] border-[#E0E0E0]">
             <div class="text-[20px] w-full text-center font-bold"><span class="text-[#896008]">Bake</span>Hub</div>
             <nav class="w-full flex flex-col gap-[10px]">
-                <a href="@Url.Action("index", "user")" class="group hover:opacity-[0.5] transtion-all duration-300 w-full flex items-center gap-[30px]">
-                    <div class="@($"w-[5px] h-[53px] rounded-br-[20px] rounded-tr-[20px] {(currentController == "user" && currentAction == "index" ? "bg-[#FBEDCD]" : "bg-white")}")"></div>
-                    <div class="@($"rounded-[6px] max-w-[172px] w-full transition-all duration-300 cursor-pointer  {(currentController == "user" && currentAction == "index" ? "bg-[#FBEDCD] text-[#896008]" : "bg-white text-black")}") flex text-[16px] font-medium items-center gap-[15px] px-[20px] py-[15px]">
-                        <svg class="@($"h-[20px] w-[20px] {(currentController == "user" && currentAction == "index" ? "fill-[#896008]" : "fill-black")}") width="20" height="20" viewBox="0 0 20 20"
+                   <a href="@Url.Action("index", "home")" class="w-full group hover:opacity-[0.5] transition-all duration-300 flex items-center gap-[30px]">
+                     <div class="@($"w-[5px] h-[53px] rounded-br-[20px] rounded-tr-[20px] {((currentController == "home" && currentAction == "index") || (currentController == null && currentAction == null) ? "bg-[#FBEDCD]" : "bg-white")}")"></div>
+                     <div class="@($"rounded-[6px] max-w-[172px] w-full transition-all duration-300 cursor-pointer  {((currentController == "home" && currentAction == "index") || (currentController == null && currentAction == null) ? "bg-[#FBEDCD] text-[#896008]" : "bg-white text-black")}") flex text-[16px] font-medium items-center gap-[15px] px-[20px] py-[15px]">
+                         <svg class="@($"h-[20px] w-[20px] {((currentController == "home" && currentAction == "index") || (currentController == null && currentAction == null) ? "fill-[#896008]" : "fill-black")}")" width="20" height="20" viewBox="0 0 20 20"
                              xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1_665)">
                                 <path d="M19.1667 18.3333H2.5C2.27899 18.3333 2.06702 18.2455 1.91074 18.0893C1.75446 17.933 1.66667 17.721 1.66667 17.5V0.833333C1.66667 0.61232 1.57887 0.400358 1.42259 0.244078C1.26631 0.0877974 1.05435 0 0.833333 0C0.61232 0 0.400358 0.0877974 0.244078 0.244078C0.0877974 0.400358 0 0.61232 0 0.833333L0 17.5C0 18.163 0.263392 18.7989 0.732233 19.2678C1.20107 19.7366 1.83696 20 2.5 20H19.1667C19.3877 20 19.5996 19.9122 19.7559 19.7559C19.9122 19.5996 20 19.3877 20 19.1667C20 18.9457 19.9122 18.7337 19.7559 18.5774C19.5996 18.4211 19.3877 18.3333 19.1667 18.3333Z" />
